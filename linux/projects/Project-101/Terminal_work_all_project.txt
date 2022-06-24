@@ -1,0 +1,856 @@
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cd Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part (main)
+$ grep -e "serdar.*Terminate*" event_history.csv | grep -o -e "i-[0-9a-f]\{17\}">result.txt
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part (main)
+$ nano
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part (main)
+$ cd ..
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101 (main)
+$ cd Second_Part
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ nano user_password.sh
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ chmod +x user_password.sh
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ ls -l
+total 5
+-rwxr-xr-x 1 mdh42 1049089 775 May 19 19:39 user_passwd.sh*
+-rwxr-xr-x 1 mdh42 1049089  46 May 22 17:33 user_password.sh*
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ man chage
+bash: man: command not found
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ `
+> bash: unexpected EOF while looking for matching ``'
+bash: syntax error: unexpected end of file
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ ~
+bash: /c/Users/mdh42: Is a directory
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/Second_Part (main)
+$ cd ~
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ pwd
+/c/Users/mdh42
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cd .ssh/
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/.ssh
+$ ssh -i "aws-laura.pem" ec2-user@ec2-3-87-92-166.compute-1.amazonaws.com
+The authenticity of host 'ec2-3-87-92-166.compute-1.amazonaws.com (3.87.92.166)' can't be established.
+ED25519 key fingerprint is SHA256:ARqaQofiIhFwk0qG0wmlJ3IO6v00TDByOJAw/EGzWmA.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-3-87-92-166.compute-1.amazonaws.com' (ED25519) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+2 package(s) needed for security, out of 5 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-29-60 ~]$ sudo su -
+[root@ip-172-31-29-60 ~]# nano user_password.sh
+[root@ip-172-31-29-60 ~]# chmod +x
+chmod: missing operand after ‘+x’
+Try 'chmod --help' for more information.
+[root@ip-172-31-29-60 ~]# chmod +x user_password.sh
+[root@ip-172-31-29-60 ~]# ./user_password.sh
+enter the username: lhill
+type the full name enclosed in double quotes: "laura hill"
+enter the password: 123456
+account succesfully created
+Changing password for user lhill.
+New password: BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: passwd: all authentication tokens updated successfully.
+password succesfully created
+Usage: chage [options] LOGIN
+
+Options:
+  -d, --lastday LAST_DAY        set date of last password change to LAST_DAY
+  -E, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -h, --help                    display this help message and exit
+  -I, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -l, --list                    show account aging information
+  -m, --mindays MIN_DAYS        set minimum number of days before password
+                                change to MIN_DAYS
+  -M, --maxdays MAX_DAYS        set maximim number of days before password
+                                change to MAX_DAYS
+  -R, --root CHROOT_DIR         directory to chroot into
+  -W, --warndays WARN_DAYS      set expiration warning days to WARN_DAYS
+
+lhill, 123456, ip-172-31-29-60.ec2.internal
+[root@ip-172-31-29-60 ~]# nano user_password.sh
+[root@ip-172-31-29-60 ~]# userdel -r lhill
+[root@ip-172-31-29-60 ~]# ./user_password.sh
+enter the username: lhill
+type the full name enclosed in double quotes: "laura hill"
+enter the password: supersecretpassword
+account succesfully created      
+Changing password for user lhill.
+New password: Retype new password: passwd: all authentication tokens updated successfully.
+password succesfully created
+Usage: chage [options] LOGIN
+
+Options:
+  -d, --lastday LAST_DAY        set date of last password change to LAST_DAY
+  -E, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -h, --help                    display this help message and exit
+  -I, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -l, --list                    show account aging information
+  -m, --mindays MIN_DAYS        set minimum number of days before password
+                                change to MIN_DAYS
+  -M, --maxdays MAX_DAYS        set maximim number of days before password
+                                change to MAX_DAYS
+  -R, --root CHROOT_DIR         directory to chroot into
+  -W, --warndays WARN_DAYS      set expiration warning days to WARN_DAYS
+
+lhill, supersecretpassword, ip-172-31-29-60.ec2.internal
+[root@ip-172-31-29-60 ~]# chage -d 0 lhill
+[root@ip-172-31-29-60 ~]# nano user_passoword
+[root@ip-172-31-29-60 ~]# nano user_password.sh
+[root@ip-172-31-29-60 ~]# userdel -r lhill
+[root@ip-172-31-29-60 ~]# ./user_password.sh
+enter the username: lhill
+type the full name enclosed in double quotes: "laura hill"
+enter the password: supersecretpassword
+account succesfully created
+Changing password for user lhill.
+New password: Retype new password: passwd: all authentication tokens updated successfully.
+password succesfully created
+lhill, supersecretpassword, ip-172-31-29-60.ec2.internal
+[root@ip-172-31-29-60 ~]# exit
+logout
+[ec2-user@ip-172-31-29-60 ~]$ su - lhill
+Password:
+You are required to change your password immediately (root enforced)
+
+Changing password for lhill.
+#!/bin/bash
+(current) UNIX password:
+su: Authentication token manipulation error
+[ec2-user@ip-172-31-29-60 ~]$ cp user_password.sh backup.sh
+cp: cannot stat ‘user_password.sh’: No such file or directory
+[ec2-user@ip-172-31-29-60 ~]$ ls
+[ec2-user@ip-172-31-29-60 ~]$ ls
+[ec2-user@ip-172-31-29-60 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[ec2-user@ip-172-31-29-60 ~]$ ls .ssh
+DATE(1)                                                                         User Commands                                                                        DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date once for each line of DATEFILE
+
+       -I[TIMESPEC], --iso-8601[=TIMESPEC]
+              output  date/time  in ISO 8601 format.  TIMESPEC='date' for date only (the default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the indicated     
+              precision.
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 07 Aug 2006 12:34:56 -0600
+
+       --rfc-3339=TIMESPEC
+              output date and time in RFC 3339 format.  TIMESPEC='date', 'seconds', or 'ns' for date and time to the indicated precision.  Date and time components are sep‐     
+              arated by a single space: 2006-08-07 12:34:56-06:00
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+authorized_keys
+[ec2-user@ip-172-31-29-60 ~]$ sudo su -
+Last login: Mon May 23 00:12:26 UTC 2022 on pts/0
+DATE(1)                                                                         User Commands                                                                        DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date once for each line of DATEFILE
+
+       -I[TIMESPEC], --iso-8601[=TIMESPEC]
+              output  date/time  in ISO 8601 format.  TIMESPEC='date' for date only (the default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the indicated     
+              precision.
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 07 Aug 2006 12:34:56 -0600
+
+       --rfc-3339=TIMESPEC
+              output date and time in RFC 3339 format.  TIMESPEC='date', 'seconds', or 'ns' for date and time to the indicated precision.  Date and time components are sep‐     
+              arated by a single space: 2006-08-07 12:34:56-06:00
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+
+       %c     locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+
+       %C     century; like %Y, except omit last two digits (e.g., 20)
+
+       %d     day of month (e.g., 01)
+
+       %D     date; same as %m/%d/%y
+
+       %e     day of month, space padded; same as %_d
+
+       %F     full date; same as %Y-%m-%d
+
+[root@ip-172-31-29-60 ~]# ls
+user_password.sh
+[root@ip-172-31-29-60 ~]# cp user_password.sh backup.sh
+[root@ip-172-31-29-60 ~]# nano backup.sh
+[root@ip-172-31-29-60 ~]# ls
+backup.sh  user_password.sh
+[root@ip-172-31-29-60 ~]# vi backup.sh
+[root@ip-172-31-29-60 ~]# vi backup.sh
+[root@ip-172-31-29-60 ~]# ls -l /etc | less
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# hostname
+ip-172-31-29-60.ec2.internal
+[root@ip-172-31-29-60 ~]# date
+Mon May 23 00:55:10 UTC 2022
+[root@ip-172-31-29-60 ~]# man date
+[root@ip-172-31-29-60 ~]# date +%F
+2022-05-23
+[root@ip-172-31-29-60 ~]# man  date
+[root@ip-172-31-29-60 ~]# date +%F-%H-%M
+2022-05-23-00-59
+[root@ip-172-31-29-60 ~]# tar czf $(date +%F-%H-%M).tgz^C
+*/5 * * * * /root/backup.sh
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# $(some command)^C
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# tar czf $(hostname)-$(date +%F-%H-%M).tgz /home/ec2-user/data /etc /boot /usr
+tar: Removing leading `/' from member names
+tar: /home/ec2-user/data: Cannot stat: No such file or directory
+tar: Removing leading `/' from hard link targets
+tar: Exiting with failure status due to previous errors
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# visudo
+visudo: /etc/sudoers.tmp unchanged
+[root@ip-172-31-29-60 ~]# visudo /etc/sudoers.d/90-backup
+usage: visudo [-chqsV] [-f sudoers]
+[root@ip-172-31-29-60 ~]# visudo -f /etc/sudoers.d/90-backup
+>>> /etc/sudoers.d/90-backup: syntax error near line 1 <<<
+What now? q
+Options are:
+  (e)dit sudoers file again
+  e(x)it without saving changes to sudoers file
+  (Q)uit and save changes to sudoers file (DANGER!)
+
+What now? e
+>>> /etc/sudoers.d/90-backup: syntax error near line 1 <<<
+*/5 * * * * /root/backup.sh
+What now? x
+[root@ip-172-31-29-60 ~]# pwd
+/root
+[root@ip-172-31-29-60 ~]# ls
+backup.sh  ip-172-31-29-60.ec2.internal-2022-05-23-01-05.tgz  user_password.sh
+[root@ip-172-31-29-60 ~]# ls -l
+total 365828
+-rwxr-xr-x 1 root root       107 May 23 00:49 backup.sh
+-rw-r--r-- 1 root root 374598406 May 23 01:06 ip-172-31-29-60.ec2.internal-2022-05-23-01-05.tgz
+-rwxr-xr-x 1 root root       588 May 23 00:24 user_password.sh
+[root@ip-172-31-29-60 ~]# rm ip-172-31-29-60.ec2.internal-2022-05-23-01-05.tgz
+rm: remove regular file ‘ip-172-31-29-60.ec2.internal-2022-05-23-01-05.tgz’? y
+[root@ip-172-31-29-60 ~]# visudo -f /etc/sudoers.d/90-backup^C
+[root@ip-172-31-29-60 ~]# ls /etc/sudoers.d/
+90-backup  90-cloud-init-users
+[root@ip-172-31-29-60 ~]# visudo -f /etc/sudoers.d/90-backup
+visudo: /etc/sudoers.d/90-backup.tmp unchanged
+[root@ip-172-31-29-60 ~]# rm /etc/sudoers.d/90-backup
+rm: remove regular empty file ‘/etc/sudoers.d/90-backup’? y
+[root@ip-172-31-29-60 ~]# visudo -f /etc/sudoers.d/90-backup
+>>> /etc/sudoers.d/90-backup: syntax error near line 1 <<<
+What now? x
+[root@ip-172-31-29-60 ~]# rm /etc/sudoers.d/90-backup
+rm: remove regular empty file ‘/etc/sudoers.d/90-backup’? y
+[root@ip-172-31-29-60 ~]# crontab -e /etc/cronta^C
+[root@ip-172-31-29-60 ~]# ls /etc/crontab
+/etc/crontab
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# crontab -e
+no crontab for root - using an empty one
+crontab: no changes made to crontab
+[root@ip-172-31-29-60 ~]# crontab -e root
+crontab: usage error: no arguments permitted after this option
+Usage:
+ crontab [options] file
+ crontab [options]
+ crontab -n [hostname]
+
+Options:
+ -u <user>  define user
+ -e         edit user's crontab
+ -l         list user's crontab
+ -r         delete user's crontab
+ -i         prompt before deleting
+ -n <host>  set host in cluster to run users' crontabs
+ -c         get host in cluster to run users' crontabs
+ -s         selinux context
+ -x <mask>  enable debugging
+
+Default operation is replace, per 1003.2
+[root@ip-172-31-29-60 ~]# logout
+[ec2-user@ip-172-31-29-60 ~]$ sudo su -
+Last login: Mon May 23 00:36:11 UTC 2022 on pts/0
+[root@ip-172-31-29-60 ~]# crontab -e
+no crontab for root - using an empty one
+crontab: no changes made to crontab
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# 
+[root@ip-172-31-29-60 ~]# ls /etc
+acpi               cron.hourly              fstab                hosts.allow    logrotate.conf  nsswitch.conf.bak  rc1.d             securetty       sysctl.conf
+adjtime            cron.monthly             gcrypt               hosts.deny     logrotate.d     openldap           rc2.d             security        sysctl.d
+aliases            crontab                  GeoIP.conf           idmapd.conf    lsm             opt                rc3.d             selinux         systemd
+aliases.db         cron.weekly              GeoIP.conf.default   image-id       lvm             os-release         rc4.d             services        system-release
+alternatives       csh.cshrc                gnupg                init.d         machine-id      pam.d              rc5.d             sestatus.conf   system-release-cpe
+amazon             csh.login                GREP_COLORS          inittab        magic           passwd             rc6.d             setuptool.d     terminfo
+anacrontab         dbus-1                   groff                inputrc        man_db.conf     passwd-            rc.d              shadow          tmpfiles.d
+at.deny            default                  group                iproute2       mke2fs.conf     pkcs11             rc.local          shadow-         trusted-key.key
+audisp             depmod.d                 group-               issue          modprobe.d      pki                request-key.conf  shells          udev
+audit              dhcp                     grub2.cfg            issue.net      modules-load.d  plymouth           request-key.d     skel            updatedb.conf
+bash_completion.d  DIR_COLORS               grub2-efi.cfg        krb5.conf      motd            pm                 resolv.conf       ssh             update-motd.d
+bashrc             DIR_COLORS.256color      grub.d               krb5.conf.d    mtab            popt.d             rpc               ssl             vimrc
+binfmt.d           DIR_COLORS.lightbgcolor  gshadow              ld.so.cache    my.cnf          postfix            rpm               statetab        virc
+chkconfig.d        dracut.conf              gshadow-             ld.so.conf     my.cnf.d        ppp                rsyncd.conf       statetab.d      wgetrc
+chrony.conf        dracut.conf.d            gss                  ld.so.conf.d   nanorc          prelink.conf.d     rsyslog.conf      subgid          X11
+SHELL=/bin/bash
+cron.d             exports                  host.conf            locale.conf    nfs.conf        protocols          sasl2             sudoers.d      
+ yum.conf
+cron.daily         exports.d                hostname             localtime      nfsmount.conf   python             scl               sudo-ldap.conf 
+ yum.repos.d
+cron.deny          filesystems              hosts                login.defs     nsswitch.conf   rc0.d              screenrc          sysconfig      
+[root@ip-172-31-29-60 ~]# ls /var/log/crontab
+ls: cannot access /var/log/crontab: No such file or directory
+mSHELL=/bin/bash
+[root@ip-172-31-29-60 ~]# locate crontab
+/etc/anacrontab
+*/5 * * * * /root/backup.sh
+/etc/crontab
+/usr/bin/crontab
+/usr/share/doc/man-pages-overrides-7.5.2/crontabs
+/usr/share/doc/man-pages-overrides-7.5.2/crontabs/COPYING
+#!/bin/bash
+/usr/share/man/man1/crontab.1.gz
+/usr/share/man/man1p/crontab.1p.gz
+/usr/share/man/man4/crontabs.4.gz
+/usr/share/man/man5/anacrontab.5.gz                                                                                                                            254,27        Bot 
+/usr/share/man/man5/crontab.5.gz
+/usr/share/vim/vim82/syntax/crontab.vim
+[root@ip-172-31-29-60 ~]# vi /etc/crontab
+[root@ip-172-31-29-60 ~]# crontab -l
+no crontab for root
+[root@ip-172-31-29-60 ~]# crontab -e
+no crontab for root - using an empty one
+crontab: no changes made to crontab
+[root@ip-172-31-29-60 ~]# vi /etc/corntab
+[root@ip-172-31-29-60 ~]# vi /etc/crontab
+[root@ip-172-31-29-60 ~]# crontab -e
+no crontab for root - using an empty one
+crontab: installing new crontab
+[root@ip-172-31-29-60 ~]# crontab -l
+*/5 * * * * /root/backup.sh
+[root@ip-172-31-29-60 ~]# vi backup.sh
+[root@ip-172-31-29-60 ~]# mkdir -p /mnt/backup
+[root@ip-172-31-29-60 ~]# date
+Mon May 23 01:40:54 UTC 2022
+[root@ip-172-31-29-60 ~]# mail
+-bash: mail: command not found
+m#!/bin/bash
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]#
+[root@ip-172-31-29-60 ~]# crontab -l
+top - 01:43:48 up  1:33,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  97 total,   1 running,  54 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :   987700 total,   246392 free,   108044 used,   633264 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   718504 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                                                          
+32693 root      20   0  168828   4356   3848 R  0.3  0.4   0:00.01 top                                                                              
+    1 root      20   0  123496   5400   3924 S  0.0  0.5   0:01.97 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_par_gp
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H-ev
+top - 01:45:58 up  1:35,  1 user,  load average: 0.84, 0.24, 0.09
+Tasks: 102 total,   4 running,  58 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 71.0 us,  6.6 sy,  0.0 ni,  1.0 id, 19.5 wa,  0.0 hi,  0.7 si,  1.3 st
+KiB Mem :   987700 total,    68544 free,   110972 used,   808184 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   714776 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                                                          
+32704 root      20   0    4496   1452   1172 R 71.7  0.1   0:50.07 gzip                                                                             
+32703 root      20   0   25496   5852   2228 S  6.7  0.6   0:01.96 tar
+  848 root      20   0       0      0      0 S  0.3  0.0   0:00.31 kswapd0
+    1 root      20   0  123496   5400   3924 S  0.0  0.5   0:01.97 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 rcu_par_gp
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H-ev
+    9 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+top - 01:50:58 up  1:40,  1 user,  load average: 0.87, 0.34, 0.15
+Tasks: 104 total,   2 running,  58 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 76.5 us,  4.8 sy,  0.0 ni,  1.0 id, 16.4 wa,  0.0 hi,  0.7 si,  0.7 st
+#*/5 * * * * /root/backup.sh
+[root@ip-172-31-29-60 ~]#  cat backup.sh
+#!/bin/bash
+if [ $(id -u) -ne 0 ]
+then
+   echo "you must be root to run this script"
+   exit 0
+fi
+tar czf /mnt/backup/$(hostname)-$(date +%F-%H-%M).tgz /home/ec2-user/data /etc /boot /usr
+[root@ip-172-31-29-60 ~]# ls /mnt/backup
+ip-172-31-29-60.ec2.internal-2022-05-23-01-45.tgz  ip-172-31-29-60.ec2.internal-2022-05-23-01-55.tgz
+ip-172-31-29-60.ec2.internal-2022-05-23-01-50.tgz
+You have new mail in /var/spool/mail/root
+[root@ip-172-31-29-60 ~]# ls -l /mnt/backup
+total 1097472
+-rw-r--r-- 1 root root 374600364 May 23 01:46 ip-172-31-29-60.ec2.internal-2022-05-23-01-45.tgz
+-rw-r--r-- 1 root root 374600364 May 23 01:51 ip-172-31-29-60.ec2.internal-2022-05-23-01-50.tgz
+-rw-r--r-- 1 root root 374600364 May 23 01:56 ip-172-31-29-60.ec2.internal-2022-05-23-01-55.tgz
+[root@ip-172-31-29-60 ~]# crontab -e
+crontab: installing new crontab
+[root@ip-172-31-29-60 ~]# crontab -l
+#*/5 * * * * /root/backup.sh
+[root@ip-172-31-29-60 ~]# ls -l /mnt/backup
+total 1097472
+-rw-r--r-- 1 root root 374600364 May 23 01:46 ip-172-31-29-60.ec2.internal-2022-05-23-01-45.tgz
+-rw-r--r-- 1 root root 374600364 May 23 01:51 ip-172-31-29-60.ec2.internal-2022-05-23-01-50.tgz
+-rw-r--r-- 1 root root 374600364 May 23 01:56 ip-172-31-29-60.ec2.internal-2022-05-23-01-55.tgz
+[root@ip-172-31-29-60 ~]# cat backup.sh
+#!/bin/bash
+if [ $(id -u) -ne 0 ]
+then
+   echo "you must be root to run this script"
+   exit 0
+fi
+tar czf /mnt/backup/$(hostname)-$(date +%F-%H-%M).tgz /home/ec2-user/data /etc /boot /usr
+[root@ip-172-31-29-60 ~]# 
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.  
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -b, --binary
+                 open files in binary mode (CR+LFs are not processed specially)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ awk
+Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
+Usage: awk [POSIX or GNU style options] [--] 'program' file ...
+POSIX options:          GNU long options: (standard)
+        -f progfile             --file=progfile
+        -F fs                   --field-separator=fs
+        -v var=val              --assign=var=val
+Short options:          GNU long options: (extensions)
+        -b                      --characters-as-bytes
+        -c                      --traditional
+        -C                      --copyright
+        -d[file]                --dump-variables[=file]
+        -D[file]                --debug[=file]
+        -e 'program-text'       --source='program-text'
+        -E file                 --exec=file
+        -g                      --gen-pot
+        -h                      --help
+        -i includefile          --include=includefile
+        -l library              --load=library
+        -L[fatal|invalid]       --lint[=fatal|invalid]
+        -M                      --bignum
+        -N                      --use-lc-numeric
+        -n                      --non-decimal-data
+        -o[file]                --pretty-print[=file]
+        -O                      --optimize
+        -p[file]                --profile[=file]
+        -P                      --posix
+        -r                      --re-interval
+        -s                      --no-optimize
+        -S                      --sandbox
+        -t                      --lint-old
+        -V                      --version
+
+To report bugs, see node `Bugs' in `gawk.info'
+which is section `Reporting Problems and Bugs' in the
+printed version.  This same information may be found at
+https://www.gnu.org/software/gawk/manual/html_node/Bugs.html.
+PLEASE do NOT try to report bugs by posting in comp.lang.awk,
+or by using a web forum such as Stack Overflow.
+
+gawk is a pattern scanning and processing language.
+By default it reads standard input and writes standard output.
+
+Examples:
+        gawk '{ sum += $1 }; END { print sum }' file
+        gawk -F: '{ print $1 }' /etc/passwd
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ pwd
+/c/Users/mdh42
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ ls
+'3D Objects'/         Music/                                                                                         Pictures/
+ AppData/            'My Documents'@                                                                                 PrintHood@
+'Application Data'@   my-repository/                                                                                 Recent@
+ Contacts/            NetHood@                                                                                      'Saved Games'/
+ Cookies@             NTUSER.DAT                                                                                     Searches/
+ Desktop/             ntuser.dat.LOG1                                                                                sed-awk-command/
+ Documents/           ntuser.dat.LOG2                                                                                SendTo@
+ Downloads/           NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                       'Start Menu'@
+ Favorites/           NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   Templates@
+ info.json            NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   terraform.tf
+ Links/               ntuser.ini                                                                                     Videos/
+'Local Settings'@     OneDrive/
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep IP info.json
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ egrep '[0-9]{1,3}.' info.json
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-01cc34ab2709337aa",
+            "InstanceId": "i-0aff1720e6223337a",
+            "InstanceType": "t2.micro",
+            "LaunchTime": "2021-11-02T19:37:02.000Z",
+                "AvailabilityZone": "us-east-1d",
+            "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+            "PrivateIpAddress": "172.31.82.220",
+                "Code": 0,
+            "SubnetId": "subnet-ed49bccc",
+            "VpcId": "vpc-f52d178f",
+            "Architecture": "x86_64",
+            "ClientToken": "74a9bf34-4ad3-46b5-a805-5851875986c4",
+                        "AttachTime": "2021-11-02T19:37:02.000Z",
+                        "AttachmentId": "eni-attach-0f02ba95a87ed3018",
+                        "DeviceIndex": 0,
+                            "GroupId": "sg-0ba45ea3775997176"
+                    "Ipv6Addresses": [],
+                    "MacAddress": "12:d7:1d:d4:80:65",
+                    "NetworkInterfaceId": "eni-0dba24100f4c91441",
+                    "OwnerId": "046402772087",
+                    "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+                    "PrivateIpAddress": "172.31.82.220",
+                            "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+                            "PrivateIpAddress": "172.31.82.220"
+                    "SubnetId": "subnet-ed49bccc",
+                    "VpcId": "vpc-f52d178f",
+                    "GroupId": "sg-0ba45ea3775997176"
+                "CoreCount": 1,
+                "HttpPutResponseHopLimit": 1,
+    "OwnerId": "046402772087",
+    "ReservationId": "r-06204eb5486010c07"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ egrep '[0-9]{1,3}\.' info.json
+            "InstanceType": "t2.micro",
+            "LaunchTime": "2021-11-02T19:37:02.000Z",
+            "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+            "PrivateIpAddress": "172.31.82.220",
+                        "AttachTime": "2021-11-02T19:37:02.000Z",
+                    "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep ec2-private_ip terraform.tf
+  kubernetes_api_url            = "https://ec2-private_ip:6443"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep PrivateIpAddress info.json
+            "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddress": "172.31.82.220",       
+                    "PrivateIpAddresses": [
+                            "PrivateIpAddress": "172.31.82.220"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ man sed
+bash: man: command not found
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -b, --binary
+                 open files in binary mode (CR+LFs are not processed specially)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep PrivateIpAddress info.json
+            "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddress": "172.31.82.220",       
+                    "PrivateIpAddresses": [
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep PrivateIpAddress info.json
+            "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddresses": [
+                            "PrivateIpAddress": "172.31.82.220"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep ec2-private_ip terraform.tf
+  kubernetes_api_url            = "https://ec2-private_ip:6443"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed -n '/ec2-private/s/\(https:\/\/\)ec2-private_ip\(:6443\)/\1172.31.82.220\2/p' terraform.tf
+  kubernetes_api_url            = "https://172.31.82.220:6443"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed -i '/ec2-private/s/\(https:\/\/\)ec2-private_ip\(:6443\)/\1172.31.82.220\2/' terraform.tf
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep ec2-private_ip terraform.tf
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem 
+-----BEGINCERTIFICATE-----\nMIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0\nWjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO\nPQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g\nrUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E\nBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j\nIbx+PKgwCgYIKoZIzj0E-----BEGIN CERTIFICATE-----\nMIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/\ngb0HWXWRgcQCIHaX54vIqmRWdyMoTkk/UkmRqI79mXIa+cZHdnaG3gtn\n-----END CERTIFICATE-----
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ openssl
+OpenSSL> exit
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ openssl x509 -in certificate.pem -noout -text
+unable to load certificate
+19168:error:0909006C:PEM routines:get_name:no start line:../openssl-1.1.1n/crypto/pem/pem_lib.c:745:Expecting: TRUSTED CERTIFICATE
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem
+-----BEGINCERTIFICATE-----\nMIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0\nWjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO\nPQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g\nrUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E\nBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j\nIbx+PKgwCgYIKoZIzj0EAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/\ngb0HWXWRgcQCIHaX54vIqmRWdyMoTkk/UkmRqI79mXIa+cZHdnaG3gtn\n-----END CERTIFICATE-----
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ vi certificate.pem
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ vi certificate.pem
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem | echo -e
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem | echo -e -
+-
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e <certificate.pem 
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ man echo
+bash: man: command not found
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo --help
+--help
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e $(cat certficate.pem)
+cat: certficate.pem: No such file or directory
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ ls
+'3D Objects'/        'Local Settings'@                                                                               OneDrive/
+ AppData/             Music/                                                                                         Pictures/
+'Application Data'@  'My Documents'@                                                                                 PrintHood@
+ certificate.pem      my-repository/                                                                                 Recent@
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e $(cat certificate.pem)
+-----BEGIN CERTIFICATE-----
+MIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy
+dmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0
+WjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO
+PQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g
+rUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E
+BAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j
+Ibx+PKgwCgYIKoZIzj0EAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e $(cat certificate.pem) > new.pem
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat new.pem
+-----BEGIN CERTIFICATE-----
+MIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy
+dmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0
+WjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO
+PQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g
+rUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E
+BAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j
+Ibx+PKgwCgYIKoZIzj0EAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/
+gb0HWXWRgcQCIHaX54vIqmRWdyMoTkk/UkmRqI79mXIa+cZHdnaG3gtn        
+-----END CERTIFICATE-----

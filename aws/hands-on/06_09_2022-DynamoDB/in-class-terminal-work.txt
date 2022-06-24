@@ -1,0 +1,91 @@
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ aws configure
+AWS Access Key ID [****************EUPN]: A......................N
+AWS Secret Access Key [****************S0zB]: AA.........................B
+Default region name [us-east-1]: us-east-1
+Default output format [json]: 
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ aws s3 ls
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ mkdir dynamodb
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cd dynamodb
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/dynamodb
+$ ls
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/dynamodb
+$ pwd
+/c/Users/mdh42/dynamodb
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/dynamodb
+$  cd ..
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ pwd
+/c/Users/mdh42
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cd Desktop
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop
+$ pwd
+/c/Users/mdh42/Desktop
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop
+$ cd Bootcamp
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp
+$ cd my-repository
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository (main)
+$ cd aws
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws (main)
+$ cd hands-on
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on (main)
+$ cd 06_09_2022-DynamoDB
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB (main)
+$ ls
+README.md  sampledata/
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB (main)
+$ aws dynamodb batch-write-item --request-items file://ProductCatalog.json
+
+Error parsing parameter '--request-items': Unable to load paramfile file://ProductCatalog.json: [Errno 2] No such file or directory: 'ProductCatalog.json'
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB (main)
+$ cd sampledata
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB/sampledata (main)
+$ aws dynamodb batch-write-item --request-items file://ProductCatalog.json
+{
+    "UnprocessedItems": {}
+}
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB/sampledata (main)
+$ aws dynamodb batch-write-item --request-items file://Forum.json
+{
+    "UnprocessedItems": {}
+}
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB/sampledata (main)
+$ ://Thread.jsonaws dynamodb batch-write-item --request-items file
+bash: ://Thread.jsonaws: No such file or directory
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB/sampledata (main)
+$ aws dynamodb batch-write-item --request-items file://Reply.json
+{
+    "UnprocessedItems": {}
+}
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/aws/hands-on/06_09_2022-DynamoDB/sampledata (main)
+$

@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: My first CloudFormation with Auto Scaling
+Parameters:
+  pVpcId:
+    Description: VPC where EC2 instances will be launched
+    Type: AWS::EC2::VPC::Id
+# Mappings:
+Resources:
+  rMySG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH and HTTP
+      GroupName: Enable SSH and HTTP
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
+      VpcId: !Ref pVpcId

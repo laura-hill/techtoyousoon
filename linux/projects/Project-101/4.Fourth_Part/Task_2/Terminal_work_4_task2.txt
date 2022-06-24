@@ -1,0 +1,89 @@
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem 
+-----BEGINCERTIFICATE-----\nMIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0\nWjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO\nPQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g\nrUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E\nBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j\nIbx+PKgwCgYIKoZIzj0E-----BEGIN CERTIFICATE-----\nMIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/\ngb0HWXWRgcQCIHaX54vIqmRWdyMoTkk/UkmRqI79mXIa+cZHdnaG3gtn\n-----END CERTIFICATE-----
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ openssl
+OpenSSL> exit
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ openssl x509 -in certificate.pem -noout -text
+unable to load certificate
+19168:error:0909006C:PEM routines:get_name:no start line:../openssl-1.1.1n/crypto/pem/pem_lib.c:745:Expecting: TRUSTED CERTIFICATE
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem
+-----BEGINCERTIFICATE-----\nMIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0\nWjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO\nPQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g\nrUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E\nBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j\nIbx+PKgwCgYIKoZIzj0EAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/\ngb0HWXWRgcQCIHaX54vIqmRWdyMoTkk/UkmRqI79mXIa+cZHdnaG3gtn\n-----END CERTIFICATE-----
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ vi certificate.pem
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ vi certificate.pem
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem | echo -e
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat certificate.pem | echo -e -
+-
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e <certificate.pem 
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ man echo
+bash: man: command not found
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo --help
+--help
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e $(cat certficate.pem)
+cat: certficate.pem: No such file or directory
+
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ ls
+'3D Objects'/        'Local Settings'@                                                                               OneDrive/
+ AppData/             Music/                                                                                         Pictures/
+'Application Data'@  'My Documents'@                                                                                 PrintHood@
+ certificate.pem      my-repository/                                                                                 Recent@
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e $(cat certificate.pem)
+-----BEGIN CERTIFICATE-----
+MIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy
+dmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0
+WjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO
+PQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g
+rUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E
+BAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j
+Ibx+PKgwCgYIKoZIzj0EAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ echo -e $(cat certificate.pem) > new.pem
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cat new.pem
+-----BEGIN CERTIFICATE-----
+MIIBdjCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy
+dmVyLWNhQDE2MzU4NTU1NDQwHhcNMjExMTAyMTIxOTA0WhcNMzExMDMxMTIxOTA0
+WjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE2MzU4NTU1NDQwWTATBgcqhkjO
+PQIBBggqhkjOPQMBBwNCAAQQQJd7pkeHl1wM+c/B2UkBjjTpSsarTv5h4Ks/Mx9g
+rUPjIlQ6BuSk5YlUz2ivCx11mqrTWyMbcxXGJP8xaxELo0IwQDAOBgNVHQ8BAf8E
+BAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUvEel77wxH6AoykYn6V3j
+Ibx+PKgwCgYIKoZIzj0EAwIDRwAwRAIgVgEMpJUv/DGMCByDFpvKiX7QePqcyxV/
+gb0HWXWRgcQCIHaX54vIqmRWdyMoTkk/UkmRqI79mXIa+cZHdnaG3gtn        
+-----END CERTIFICATE-----

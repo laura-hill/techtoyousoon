@@ -1,0 +1,8 @@
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ cd Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part (main)
+$ grep -e "serdar.*Terminate*" event_history.csv | grep -o -e "i-[0-9a-f]\{17\}">result.txt
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~/Desktop/Bootcamp/my-repository/linux/projects/Project-101/First_Part (main)
+$ nano

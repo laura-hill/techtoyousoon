@@ -1,0 +1,1007 @@
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-26-186:~$ sudo apt-get install mariadb-client -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package mariadb-client
+ubuntu@ip-172-31-26-186:~$ sudo apt update -y
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [2621 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [487 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [791 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [109 kB]
+Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1819 kB]
+Get:14 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2279 kB]
+Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [395 kB]
+Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [24.9 kB]
+Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [6012 B]
+Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [10.8 kB]
+Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [5016 B]
+Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [11.6 kB]
+Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [5864 B]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [398 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [767 kB]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [105 kB]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1208 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [279 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [19.0 kB]
+Get:28 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [3836 B]
+Fetched 25.4 MB in 5s (4893 kB/s) 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+66 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@ip-172-31-26-186:~$ sudo apt-get install mariadb-client -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libaio1 libconfig-inifiles-perl libdbd-mysql-perl libdbi-perl libjemalloc1 libmysqlclient20 libterm-readkey-perl mariadb-client-10.1 mariadb-client-core-10.1 mariadb-common mysql-common
+Suggested packages:
+  libclone-perl libmldbm-perl libnet-daemon-perl libsql-statement-perl
+The following NEW packages will be installed:
+  libaio1 libconfig-inifiles-perl libdbd-mysql-perl libdbi-perl libjemalloc1 libmysqlclient20 libterm-readkey-perl mariadb-client mariadb-client-10.1 mariadb-client-core-10.1 mariadb-common
+  mysql-common
+0 upgraded, 12 newly installed, 0 to remove and 66 not upgraded.
+Need to get 12.1 MB of archives.
+After this operation, 76.2 MB of additional disk space will be used.
+Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaio1 amd64 0.3.110-5ubuntu0.1 [6476 B]
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libdbi-perl amd64 1.640-1ubuntu0.3 [724 kB]
+Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 mysql-common all 5.8+1.0.4 [7308 B]
+Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmysqlclient20 amd64 5.7.38-0ubuntu0.18.04.1 [689 kB]
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libdbd-mysql-perl amd64 4.046-1 [82.0 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libterm-readkey-perl amd64 2.37-1build1 [24.4 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 libconfig-inifiles-perl all 2.94-1 [40.4 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 mariadb-common all 1:10.1.48-0ubuntu0.18.04.1 [16.1 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 mariadb-client-core-10.1 amd64 1:10.1.48-0ubuntu0.18.04.1 [4767 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libjemalloc1 amd64 3.6.0-11 [82.4 kB]
+Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 mariadb-client-10.1 amd64 1:10.1.48-0ubuntu0.18.04.1 [5613 kB]
+Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 mariadb-client all 1:10.1.48-0ubuntu0.18.04.1 [12.8 kB]
+Fetched 12.1 MB in 0s (41.2 MB/s)     
+Selecting previously unselected package libaio1:amd64.
+(Reading database ... 57672 files and directories currently installed.)
+Preparing to unpack .../00-libaio1_0.3.110-5ubuntu0.1_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.110-5ubuntu0.1) ...
+Selecting previously unselected package libdbi-perl.
+Preparing to unpack .../01-libdbi-perl_1.640-1ubuntu0.3_amd64.deb ...
+Unpacking libdbi-perl (1.640-1ubuntu0.3) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../02-mysql-common_5.8+1.0.4_all.deb ...
+Unpacking mysql-common (5.8+1.0.4) ...
+Selecting previously unselected package libmysqlclient20:amd64.
+Preparing to unpack .../03-libmysqlclient20_5.7.38-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking libmysqlclient20:amd64 (5.7.38-0ubuntu0.18.04.1) ...
+Selecting previously unselected package libdbd-mysql-perl.
+Preparing to unpack .../04-libdbd-mysql-perl_4.046-1_amd64.deb ...
+Unpacking libdbd-mysql-perl (4.046-1) ...
+Selecting previously unselected package libterm-readkey-perl.
+Preparing to unpack .../05-libterm-readkey-perl_2.37-1build1_amd64.deb ...
+Unpacking libterm-readkey-perl (2.37-1build1) ...
+Selecting previously unselected package libconfig-inifiles-perl.
+Preparing to unpack .../06-libconfig-inifiles-perl_2.94-1_all.deb ...
+Unpacking libconfig-inifiles-perl (2.94-1) ...
+Selecting previously unselected package mariadb-common.
+Preparing to unpack .../07-mariadb-common_1%3a10.1.48-0ubuntu0.18.04.1_all.deb ...
+Unpacking mariadb-common (1:10.1.48-0ubuntu0.18.04.1) ...
+Selecting previously unselected package mariadb-client-core-10.1.
+Preparing to unpack .../08-mariadb-client-core-10.1_1%3a10.1.48-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking mariadb-client-core-10.1 (1:10.1.48-0ubuntu0.18.04.1) ...
+Selecting previously unselected package libjemalloc1.
+Preparing to unpack .../09-libjemalloc1_3.6.0-11_amd64.deb ...
+Unpacking libjemalloc1 (3.6.0-11) ...
+Selecting previously unselected package mariadb-client-10.1.
+Preparing to unpack .../10-mariadb-client-10.1_1%3a10.1.48-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking mariadb-client-10.1 (1:10.1.48-0ubuntu0.18.04.1) ...
+Selecting previously unselected package mariadb-client.
+Preparing to unpack .../11-mariadb-client_1%3a10.1.48-0ubuntu0.18.04.1_all.deb ...
+Unpacking mariadb-client (1:10.1.48-0ubuntu0.18.04.1) ...
+Setting up libconfig-inifiles-perl (2.94-1) ...
+Setting up libjemalloc1 (3.6.0-11) ...
+Setting up mysql-common (5.8+1.0.4) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libterm-readkey-perl (2.37-1build1) ...
+Setting up libaio1:amd64 (0.3.110-5ubuntu0.1) ...
+Setting up libmysqlclient20:amd64 (5.7.38-0ubuntu0.18.04.1) ...
+Setting up libdbi-perl (1.640-1ubuntu0.3) ...
+Setting up mariadb-common (1:10.1.48-0ubuntu0.18.04.1) ...
+update-alternatives: using /etc/mysql/mariadb.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up mariadb-client-core-10.1 (1:10.1.48-0ubuntu0.18.04.1) ...
+Setting up libdbd-mysql-perl (4.046-1) ...
+Setting up mariadb-client-10.1 (1:10.1.48-0ubuntu0.18.04.1) ...
+Setting up mariadb-client (1:10.1.48-0ubuntu0.18.04.1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.5) ...
+ubuntu@ip-172-31-26-186:~$ mysql --version
+mysql  Ver 15.1 Distrib 10.1.48-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+ubuntu@ip-172-31-26-186:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 18.04.6 LTS
+Release:        18.04
+Codename:       bionic
+ubuntu@ip-172-31-26-186:~$ mysql --version
+mysql  Ver 15.1 Distrib 10.1.48-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+ubuntu@ip-172-31-26-186:~$ mysql -h rds-mysql.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.25 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| clarusway          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+MySQL [(none)]> USE clarusway;
+Database changed
+MySQL [clarusway]> SHOW TABLES;
+Empty set (0.00 sec)
+
+MySQL [clarusway]> SELECT Host, User, authentication_string FROM user;
+ERROR 1146 (42S02): Table 'clarusway.user' doesn't exist
+MySQL [clarusway]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| clarusway          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+MySQL [clarusway]> USE mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [mysql]> SHOW TABLES;
++------------------------------------------------------+
+| Tables_in_mysql                                      |
++------------------------------------------------------+
+| columns_priv                                         |
+| component                                            |
+| db                                                   |
+| default_roles                                        |
+| engine_cost                                          |
+| func                                                 |
+| general_log                                          |
+| general_log_template                                 |
+| global_grants                                        |
+| gtid_executed                                        |
+| help_category                                        |
+| help_keyword                                         |
+| help_relation                                        |
+| help_topic                                           |
+| innodb_index_stats                                   |
+| innodb_table_stats                                   |
+| password_history                                     |
+| plugin                                               |
+| procs_priv                                           |
+| proxies_priv                                         |
+| rds_configuration                                    |
+| rds_global_status_history                            |
+| rds_global_status_history_old                        |
+| rds_heartbeat2                                       |
+| rds_history                                          |
+| rds_replication_status                               |
+| rds_sysinfo                                          |
+| replication_asynchronous_connection_failover         |
+| replication_asynchronous_connection_failover_managed |
+| role_edges                                           |
+| server_cost                                          |
+| servers                                              |
+| slave_master_info                                    |
+| slave_relay_log_info                                 |
+| slave_worker_info                                    |
+| slow_log                                             |
+| slow_log_template                                    |
+| tables_priv                                          |
+| time_zone                                            |
+| time_zone_leap_second                                |
+| time_zone_name                                       |
+| time_zone_transition                                 |
+| time_zone_transition_type                            |
+| user                                                 |
++------------------------------------------------------+
+44 rows in set (0.01 sec)
+
+MySQL [mysql]> USE clarusway;
+Database changed
+MySQL [clarusway]> CREATE TABLE `offices` (
+    ->   `office_id` int(11) NOT NULL,
+    ->   `address` varchar(50) NOT NULL,
+    ->   `city` varchar(50) NOT NULL,
+    ->   `state` varchar(50) NOT NULL,
+    ->   PRIMARY KEY (`office_id`)
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+MySQL [clarusway]> SHOW TABLES;
++---------------------+
+| Tables_in_clarusway |
++---------------------+
+| offices             |
++---------------------+
+1 row in set (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (1,'03 Reinke Trail','Cincinnati','OH');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (2,'5507 Becker Terrace','New York City','NY');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (3,'54 Northland Court','Richmond','VA');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (4,'08 South Crossing','Cincinnati','OH');
+O `offices` VALUES (5,'553 Maple Drive','MinneapolQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (5,'553 Maple Drive','Minneapolis','MN');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (6,'23 North Plaza','Aurora','CO');
+LUES (7,'9658 Wayridge Court','Boise','ID');
+INSERQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (7,'9658 Wayridge Court','Boise','ID');
+T INTO `offices` VALUES (8,'9 Grayhawk Trail','NewQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (8,'9 Grayhawk Trail','New York City','NY');
+,'16862 Westend Hill','Knoxville','TN');
+INSERT INQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (9,'16862 Westend Hill','Knoxville','TN');
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `offices` VALUES (10,'4 Bluestem Parkway','Savannah','GA');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> select * from offices;
++-----------+---------------------+---------------+-------+
+| office_id | address             | city          | state |
++-----------+---------------------+---------------+-------+
+|         1 | 03 Reinke Trail     | Cincinnati    | OH    |
+|         2 | 5507 Becker Terrace | New York City | NY    |
+|         3 | 54 Northland Court  | Richmond      | VA    |
+|         4 | 08 South Crossing   | Cincinnati    | OH    |
+|         5 | 553 Maple Drive     | Minneapolis   | MN    |
+|         6 | 23 North Plaza      | Aurora        | CO    |
+|         7 | 9658 Wayridge Court | Boise         | ID    |
+|         8 | 9 Grayhawk Trail    | New York City | NY    |
+|         9 | 16862 Westend Hill  | Knoxville     | TN    |
+|        10 | 4 Bluestem Parkway  | Savannah      | GA    |
++-----------+---------------------+---------------+-------+
+10 rows in set (0.01 sec)
+
+MySQL [clarusway]> CREATE TABLE `employees` (
+    ->   `employee_id` int(11) NOT NULL,
+    ->   `first_name` varchar(50) NOT NULL,
+    ->   `last_name` varchar(50) NOT NULL,
+    ->   `job_title` varchar(50) NOT NULL,
+    ->   `salary` int(11) NOT NULL,
+    ->   `reports_to` int(11) DEFAULT NULL,
+    ->   `office_id` int(11) NOT NULL,
+    ->   PRIMARY KEY (`employee_id`),
+    ->   KEY `fk_employees_offices_idx` (`office_id`),
+    ->   CONSTRAINT `fk_employees_offices` FOREIGN KEY (`office_id`) REFERENCES `offices` (`office_id`) ON UPDATE CASCADE
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+Query OK, 0 rows affected, 4 warnings (0.04 sec)
+
+MySQL [clarusway]> SHOW TABLES;
++---------------------+
+| Tables_in_clarusway |
++---------------------+
+| employees           |
+| offices             |
++---------------------+
+2 rows in set (0.01 sec)
+
+MySQL [clarusway]> select count * from employees;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from employees' at line 1
+MySQL [clarusway]> INSERT INTO `employees` VALUES (37270,'Yovonnda','Magrannell','Executive Secretary',63996,NULL,10);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (33391,'Darcy','Nortunen','Account Executive',62871,37270,1);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (37851,'Sayer','Matterson','Statistician III',98926,37270,1);
+mployees` VALUES (40448,'Mindy','Crissil','Staff SQuery OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (40448,'Mindy','Crissil','Staff Scientist',94860,37270,1);
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (56274,'Keriann','Alloisi','VP Marketing',110150,37270,1);
+196,'Alaster','Scutchin','Assistant Professor',321Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (63196,'Alaster','Scutchin','Assistant Professor',32179,37270,2);
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (67009,'North','de Clerc','VP Product Management',114257,37270,2);
+Elladine','Rising','Social Worker',96767,37270,2);Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (67370,'Elladine','Rising','Social Worker',96767,37270,2);
+ysey','Financial Advisor',52832,37270,2);
+INSERT IQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (68249,'Nisse','Voysey','Financial Advisor',52832,37270,2);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (72540,'Guthrey','Iacopetti','Office Assistant I',117690,37270,3);
+puter Systems Analyst IV',96401,37270,3);
+INSERT IQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (72913,'Kass','Hefferan','Computer Systems Analyst IV',96401,37270,3);
+NTO `employees` VALUES (75900,'Virge','Goodrum','IQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (75900,'Virge','Goodrum','Information Systems Manager',54578,37270,3);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (76196,'Mirilla','Janowski','Cost Accountant',119241,37270,3);
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (80529,'Lynde','Aronson','Junior Executive',77182,37270,4);
+s` VALUES (80679,'Mildrid','Sokale','Geologist II'Query OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (80679,'Mildrid','Sokale','Geologist II',67987,37270,4);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (84791,'Hazel','Tarbert','General Manager',93760,37270,4);
+Query OK, 1 row affected (0.01 sec)
+
+','Kesterton','Pharmacist',86119,37270,4);
+INSERT MySQL [clarusway]> INSERT INTO `employees` VALUES (95213,'Cole','Kesterton','Pharmacist',86119,37270,4);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (96513,'Theresa','Binney','Food Chemist',47354,37270,5);
+ees` VALUES (98374,'Estrellita','Daleman','Staff AQuery OK, 1 row affected (0.00 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (98374,'Estrellita','Daleman','Staff Accountant IV',70187,37270,5);
+es` VALUES (115357,'Ivy','Fearey','Structural EngiQuery OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> INSERT INTO `employees` VALUES (115357,'Ivy','Fearey','Structural Engineer',92710,37270,5);
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [clarusway]> select * from employees;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       37851 | Sayer      | Matterson  | Statistician III            |  98926 |      37270 |         1 |
+|       40448 | Mindy      | Crissil    | Staff Scientist             |  94860 |      37270 |         1 |
+|       56274 | Keriann    | Alloisi    | VP Marketing                | 110150 |      37270 |         1 |
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       67009 | North      | de Clerc   | VP Product Management       | 114257 |      37270 |         2 |
+|       67370 | Elladine   | Rising     | Social Worker               |  96767 |      37270 |         2 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       72540 | Guthrey    | Iacopetti  | Office Assistant I          | 117690 |      37270 |         3 |
+|       72913 | Kass       | Hefferan   | Computer Systems Analyst IV |  96401 |      37270 |         3 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       76196 | Mirilla    | Janowski   | Cost Accountant             | 119241 |      37270 |         3 |
+|       80529 | Lynde      | Aronson    | Junior Executive            |  77182 |      37270 |         4 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       84791 | Hazel      | Tarbert    | General Manager             |  93760 |      37270 |         4 |
+|       95213 | Cole       | Kesterton  | Pharmacist                  |  86119 |      37270 |         4 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
+|       98374 | Estrellita | Daleman    | Staff Accountant IV         |  70187 |      37270 |         5 |
+|      115357 | Ivy        | Fearey     | Structural Engineer         |  92710 |      37270 |         5 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> SHOW TABLES;
++---------------------+
+| Tables_in_clarusway |
++---------------------+
+| employees           |
+| offices             |
++---------------------+
+2 rows in set (0.00 sec)
+
+MySQL [clarusway]> SELECT * from offices;
++-----------+---------------------+---------------+-------+
+| office_id | address             | city          | state |
++-----------+---------------------+---------------+-------+
+|         1 | 03 Reinke Trail     | Cincinnati    | OH    |
+|         2 | 5507 Becker Terrace | New York City | NY    |
+|         3 | 54 Northland Court  | Richmond      | VA    |
+|         4 | 08 South Crossing   | Cincinnati    | OH    |
+|         5 | 553 Maple Drive     | Minneapolis   | MN    |
+|         6 | 23 North Plaza      | Aurora        | CO    |
+|         7 | 9658 Wayridge Court | Boise         | ID    |
+|         8 | 9 Grayhawk Trail    | New York City | NY    |
+|         9 | 16862 Westend Hill  | Knoxville     | TN    |
+|        10 | 4 Bluestem Parkway  | Savannah      | GA    |
++-----------+---------------------+---------------+-------+
+10 rows in set (0.00 sec)
+
+MySQL [clarusway]> select * from employees;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       37851 | Sayer      | Matterson  | Statistician III            |  98926 |      37270 |         1 |
+|       40448 | Mindy      | Crissil    | Staff Scientist             |  94860 |      37270 |         1 |
+|       56274 | Keriann    | Alloisi    | VP Marketing                | 110150 |      37270 |         1 |
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       67009 | North      | de Clerc   | VP Product Management       | 114257 |      37270 |         2 |
+|       67370 | Elladine   | Rising     | Social Worker               |  96767 |      37270 |         2 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       72540 | Guthrey    | Iacopetti  | Office Assistant I          | 117690 |      37270 |         3 |
+|       72913 | Kass       | Hefferan   | Computer Systems Analyst IV |  96401 |      37270 |         3 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       76196 | Mirilla    | Janowski   | Cost Accountant             | 119241 |      37270 |         3 |
+|       80529 | Lynde      | Aronson    | Junior Executive            |  77182 |      37270 |         4 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       84791 | Hazel      | Tarbert    | General Manager             |  93760 |      37270 |         4 |
+|       95213 | Cole       | Kesterton  | Pharmacist                  |  86119 |      37270 |         4 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
+|       98374 | Estrellita | Daleman    | Staff Accountant IV         |  70187 |      37270 |         5 |
+|      115357 | Ivy        | Fearey     | Structural Engineer         |  92710 |      37270 |         5 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> select employees.first_name, employees.last_name, offices.state from employees, offices where employees.office_id=offices.office_id;
++------------+------------+-------+
+| first_name | last_name  | state |
++------------+------------+-------+
+| Darcy      | Nortunen   | OH    |
+| Sayer      | Matterson  | OH    |
+| Mindy      | Crissil    | OH    |
+| Keriann    | Alloisi    | OH    |
+| Alaster    | Scutchin   | NY    |
+| North      | de Clerc   | NY    |
+| Elladine   | Rising     | NY    |
+| Nisse      | Voysey     | NY    |
+| Guthrey    | Iacopetti  | VA    |
+| Kass       | Hefferan   | VA    |
+| Virge      | Goodrum    | VA    |
+| Mirilla    | Janowski   | VA    |
+| Lynde      | Aronson    | OH    |
+| Mildrid    | Sokale     | OH    |
+| Hazel      | Tarbert    | OH    |
+| Cole       | Kesterton  | OH    |
+| Theresa    | Binney     | MN    |
+| Estrellita | Daleman    | MN    |
+| Ivy        | Fearey     | MN    |
+| Yovonnda   | Magrannell | GA    |
++------------+------------+-------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> EXIT;
+Bye
+ubuntu@ip-172-31-26-186:~$ mysql -h rds-mysql.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 31
+Server version: 8.0.25 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> USE clarusway;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [clarusway]> SELECT * from employees;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       37851 | Sayer      | Matterson  | Statistician III            |  98926 |      37270 |         1 |
+|       40448 | Mindy      | Crissil    | Staff Scientist             |  94860 |      37270 |         1 |
+|       56274 | Keriann    | Alloisi    | VP Marketing                | 110150 |      37270 |         1 |
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       67009 | North      | de Clerc   | VP Product Management       | 114257 |      37270 |         2 |
+|       67370 | Elladine   | Rising     | Social Worker               |  96767 |      37270 |         2 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       72540 | Guthrey    | Iacopetti  | Office Assistant I          | 117690 |      37270 |         3 |
+|       72913 | Kass       | Hefferan   | Computer Systems Analyst IV |  96401 |      37270 |         3 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       76196 | Mirilla    | Janowski   | Cost Accountant             | 119241 |      37270 |         3 |
+|       80529 | Lynde      | Aronson    | Junior Executive            |  77182 |      37270 |         4 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       84791 | Hazel      | Tarbert    | General Manager             |  93760 |      37270 |         4 |
+|       95213 | Cole       | Kesterton  | Pharmacist                  |  86119 |      37270 |         4 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
+|       98374 | Estrellita | Daleman    | Staff Accountant IV         |  70187 |      37270 |         5 |
+|      115357 | Ivy        | Fearey     | Structural Engineer         |  92710 |      37270 |         5 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> DELETE FROM employees WHERE salary > 70000;
+Query OK, 13 rows affected (0.00 sec)
+
+MySQL [clarusway]> select count(*) from employees;
++----------+
+| count(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.00 sec)
+
+MySQL [clarusway]> select * from employees;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+7 rows in set (0.01 sec)
+
+MySQL [clarusway]> exit;
+Bye
+ubuntu@ip-172-31-26-186:~$ mysql -h restored-from-man-snapshot.cbnre06bzyxe.us-east-1.rds.amazonaws.com
+ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib/x86_64-linux-gnu/mariadb18/plugin/caching_sha2_password.so: cannot open shared object file: No such file or 
+directory
+ubuntu@ip-172-31-26-186:~$ mysql -h restored-from-man-snapshot.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.25 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> USE clarusway;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [clarusway]> SHOW TABLES;
++---------------------+
+| Tables_in_clarusway |
++---------------------+
+| employees           |
+| offices             |
++---------------------+
+2 rows in set (0.01 sec)
+
+MySQL [clarusway]> SELECT * FROM employees;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       37851 | Sayer      | Matterson  | Statistician III            |  98926 |      37270 |         1 |
+|       40448 | Mindy      | Crissil    | Staff Scientist             |  94860 |      37270 |         1 |
+|       56274 | Keriann    | Alloisi    | VP Marketing                | 110150 |      37270 |         1 |
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       67009 | North      | de Clerc   | VP Product Management       | 114257 |      37270 |         2 |
+|       67370 | Elladine   | Rising     | Social Worker               |  96767 |      37270 |         2 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       72540 | Guthrey    | Iacopetti  | Office Assistant I          | 117690 |      37270 |         3 |
+|       72913 | Kass       | Hefferan   | Computer Systems Analyst IV |  96401 |      37270 |         3 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       76196 | Mirilla    | Janowski   | Cost Accountant             | 119241 |      37270 |         3 |
+|       80529 | Lynde      | Aronson    | Junior Executive            |  77182 |      37270 |         4 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       84791 | Hazel      | Tarbert    | General Manager             |  93760 |      37270 |         4 |
+|       95213 | Cole       | Kesterton  | Pharmacist                  |  86119 |      37270 |         4 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
+|       98374 | Estrellita | Daleman    | Staff Accountant IV         |  70187 |      37270 |         5 |
+|      115357 | Ivy        | Fearey     | Structural Engineer         |  92710 |      37270 |         5 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> EXIT;
+Bye
+ubuntu@ip-172-31-26-186:~$ mysql - h rds-mysql.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p
+mysql  Ver 15.1 Distrib 10.1.48-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Usage: mysql [OPTIONS] [database]
+
+Default options are read from the following files in the given order:
+/etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf
+The following groups are read: mysql client client-server client-mariadb
+The following options may be given as the first argument:
+--print-defaults          Print the program argument list and exit.
+--no-defaults             Don't read default options from any option file.
+The following specify which files/extra groups are read (specified before remaining options):
+--defaults-file=#         Only read default options from the given file #.
+--defaults-extra-file=#   Read this file after the global files are read.
+--defaults-group-suffix=# Additionally read default groups with # appended as a suffix.
+
+  -?, --help          Display this help and exit.
+  -I, --help          Synonym for -?
+  --abort-source-on-error
+                      Abort 'source filename' operations in case of errors
+  --auto-rehash       Enable automatic rehashing. One doesn't need to use
+                      'rehash' to get table and field completion, but startup
+                      and reconnecting may take a longer time. Disable with
+                      --disable-auto-rehash.
+                      (Defaults to on; use --skip-auto-rehash to disable.)
+  -A, --no-auto-rehash
+                      No automatic rehashing. One has to use 'rehash' to get
+                      table and field completion. This gives a quicker start of
+                      mysql and disables rehashing on reconnect.
+  --auto-vertical-output
+                      Automatically switch to vertical output mode if the
+                      result is wider than the terminal width.
+  -B, --batch         Don't use history file. Disable interactive behavior.
+                      (Enables --silent.)
+  --binary-as-hex     Print binary data as hex
+  --character-sets-dir=name
+                      Directory for character set files.
+  --column-type-info  Display column type information.
+  -c, --comments      Preserve comments. Send comments to the server. The
+                      default is --skip-comments (discard comments), enable
+                      with --comments.
+  -C, --compress      Use compression in server/client protocol.
+  -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+  --debug-check       Check memory and open file usage at exit.
+  -T, --debug-info    Print some debug info at exit.
+  -D, --database=name Database to use.
+  --default-character-set=name
+                      Set the default character set.
+  --delimiter=name    Delimiter to be used.
+  -e, --execute=name  Execute command and quit. (Disables --force and history
+                      file.)
+  -E, --vertical      Print the output of a query (rows) vertically.
+  -f, --force         Continue even if we get an SQL error. Sets
+                      abort-source-on-error to 0
+  -G, --named-commands
+                      Enable named commands. Named commands mean this program's
+                      internal commands; see mysql> help . When enabled, the
+                      named commands can be used from any line of the query,
+                      otherwise only from the first line, before an enter.
+                      Disable with --disable-named-commands. This option is
+                      disabled by default.
+  -i, --ignore-spaces Ignore space after function names.
+  --init-command=name SQL Command to execute when connecting to MySQL server.
+                      Will automatically be re-executed when reconnecting.
+  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+  -b, --no-beep       Turn off beep on error.
+  -h, --host=name     Connect to host.
+  -H, --html          Produce HTML output.
+  -X, --xml           Produce XML output.
+  --line-numbers      Write line numbers for errors.
+                      (Defaults to on; use --skip-line-numbers to disable.)
+  -L, --skip-line-numbers
+                      Don't write line number for errors.
+  -n, --unbuffered    Flush buffer after each query.
+  --column-names      Write column names in results.
+                      (Defaults to on; use --skip-column-names to disable.)
+  -N, --skip-column-names
+                      Don't write column names in results.
+  --sigint-ignore     Ignore SIGINT (CTRL-C).
+  -o, --one-database  Ignore statements except those that occur while the
+                      default database is the one named at the command line.
+  --pager[=name]      Pager to use to display results. If you don't supply an
+                      option, the default pager is taken from your ENV variable
+                      PAGER. Valid pagers are less, more, cat [> filename],
+                      etc. See interactive help (\h) also. This option does not
+                      work in batch mode. Disable with --disable-pager. This
+                      option is disabled by default.
+  -p, --password[=name]
+                      Password to use when connecting to server. If password is
+                      not given it's asked from the tty.
+  -P, --port=#        Port number to use for connection or 0 for default to, in
+                      order of preference, my.cnf, $MYSQL_TCP_PORT,
+                      /etc/services, built-in default (3306).
+  --progress-reports  Get progress reports for long running commands (like
+                      ALTER TABLE)
+                      (Defaults to on; use --skip-progress-reports to disable.)
+  --prompt=name       Set the mysql prompt to this value.
+  --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+                      memory).
+  -q, --quick         Don't cache result, print it row by row. This may slow
+                      down the server if the output is suspended. Doesn't use
+                      history file.
+  -r, --raw           Write fields without conversion. Used with --batch.
+  --reconnect         Reconnect if the connection is lost. Disable with
+                      --disable-reconnect. This option is enabled by default.
+                      (Defaults to on; use --skip-reconnect to disable.)
+  -s, --silent        Be more silent. Print results with a tab as separator,
+                      each row on new line.
+  -S, --socket=name   The socket file to use for connection.
+  --ssl               Enable SSL for connection (automatically enabled with
+                      other flags).
+  --ssl-ca=name       CA file in PEM format (check OpenSSL docs, implies
+                      --ssl).
+  --ssl-capath=name   CA directory (check OpenSSL docs, implies --ssl).
+  --ssl-cert=name     X509 cert in PEM format (implies --ssl).
+  --ssl-cipher=name   SSL cipher to use (implies --ssl).
+  --ssl-key=name      X509 key in PEM format (implies --ssl).
+  --ssl-crl=name      Certificate revocation list (implies --ssl).
+  --ssl-crlpath=name  Certificate revocation list path (implies --ssl).
+  --ssl-verify-server-cert
+                      Verify server's "Common Name" in its cert against
+                      hostname used when connecting. This option is disabled by
+                      default.
+  -t, --table         Output in table format.
+  --tee=name          Append everything into outfile. See interactive help (\h)
+                      also. Does not work in batch mode. Disable with
+                      --disable-tee. This option is disabled by default.
+  -u, --user=name     User for login if not current user.
+  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+  -v, --verbose       Write more. (-v -v -v gives the table output format).
+  -V, --version       Output version information and exit.
+  -w, --wait          Wait and retry if connection is down.
+  --connect-timeout=# Number of seconds before connection timeout.
+  --max-allowed-packet=#
+                      The maximum packet length to send to or receive from
+                      server.
+  --net-buffer-length=#
+                      The buffer size for TCP/IP and socket communication.
+  --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+  --max-join-size=#   Automatic limit for rows in a join when using
+                      --safe-updates.
+  --secure-auth       Refuse client connecting to server if it uses old
+                      (pre-4.1.1) protocol.
+  --server-arg=name   Send embedded server this as a parameter.
+  --show-warnings     Show warnings after every statement.
+  --plugin-dir=name   Directory for client-side plugins.
+  --default-auth=name Default authentication client-side plugin to use.
+  --binary-mode       By default, ASCII '\0' is disallowed and '\r\n' is
+                      translated to '\n'. This switch turns off both features,
+                      and also turns off parsing of all clientcommands except
+                      \C and DELIMITER, in non-interactive mode (for input
+                      piped to mysql or loaded using the 'source' command).
+                      This is necessary when processing output from mysqlbinlog
+                      that may contain blobs.
+
+Variables (--variable-name=value)
+and boolean options {FALSE|TRUE}  Value (after reading options)
+--------------------------------- ----------------------------------------
+abort-source-on-error             FALSE
+auto-rehash                       TRUE
+auto-vertical-output              FALSE
+binary-as-hex                     FALSE
+character-sets-dir                (No default value)
+column-type-info                  FALSE
+comments                          FALSE
+compress                          FALSE
+debug-check                       FALSE
+debug-info                        FALSE
+database                          (No default value)
+default-character-set             utf8mb4
+delimiter                         ;
+vertical                          FALSE
+force                             FALSE
+named-commands                    FALSE
+ignore-spaces                     FALSE
+init-command                      (No default value)
+local-infile                      FALSE
+no-beep                           FALSE
+host                              (No default value)
+html                              FALSE
+xml                               FALSE
+line-numbers                      TRUE
+unbuffered                        FALSE
+column-names                      TRUE
+sigint-ignore                     FALSE
+port                              0
+progress-reports                  TRUE
+prompt                            \N [\d]>
+quick                             FALSE
+raw                               FALSE
+reconnect                         TRUE
+socket                            /var/run/mysqld/mysqld.sock
+ssl                               FALSE
+ssl-ca                            (No default value)
+ssl-capath                        (No default value)
+ssl-cert                          (No default value)
+ssl-cipher                        (No default value)
+ssl-key                           (No default value)
+ssl-crl                           (No default value)
+ssl-crlpath                       (No default value)
+ssl-verify-server-cert            FALSE
+table                             FALSE
+user                              admin
+safe-updates                      FALSE
+i-am-a-dummy                      FALSE
+connect-timeout                   0
+max-allowed-packet                16777216
+net-buffer-length                 16384
+select-limit                      1000
+max-join-size                     1000000
+secure-auth                       FALSE
+show-warnings                     FALSE
+plugin-dir                        (No default value)
+default-auth                      (No default value)
+binary-mode                       FALSE
+ubuntu@ip-172-31-26-186:~$ USE clarusway;
+USE: command not found
+ubuntu@ip-172-31-26-186:~$ mysql -h rds-mysql.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 39
+Server version: 8.0.25 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> USE clarusway;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [clarusway]> DELETE FROM employees WHERE salary > 60000;
+Query OK, 3 rows affected (0.00 sec)
+
+MySQL [clarusway]> SELECT * FROM employees;
++-------------+------------+-----------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name | job_title                   | salary | reports_to | office_id |
++-------------+------------+-----------+-----------------------------+--------+------------+-----------+
+|       63196 | Alaster    | Scutchin  | Assistant Professor         |  32179 |      37270 |         2 |
+|       68249 | Nisse      | Voysey    | Financial Advisor           |  52832 |      37270 |         2 |
+|       75900 | Virge      | Goodrum   | Information Systems Manager |  54578 |      37270 |         3 |
+|       96513 | Theresa    | Binney    | Food Chemist                |  47354 |      37270 |         5 |
++-------------+------------+-----------+-----------------------------+--------+------------+-----------+
+4 rows in set (0.00 sec)
+
+MySQL [clarusway]> mysql -h restored-from-point-in-time-rds.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p clarusway
+    ->
+    -> Ctrl-C -- exit!
+Aborted
+ubuntu@ip-172-31-26-186:~$ mysql -h restored-from-point-in-time-rds.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.25 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> SELECT * FROM employees ORDER BY salary ASC;
+ERROR 1046 (3D000): No database selected
+MySQL [(none)]> USE clarusway;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [clarusway]> SELECT * FROM employees ORDER BY salary ASC;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       98374 | Estrellita | Daleman    | Staff Accountant IV         |  70187 |      37270 |         5 |
+|       80529 | Lynde      | Aronson    | Junior Executive            |  77182 |      37270 |         4 |
+|       95213 | Cole       | Kesterton  | Pharmacist                  |  86119 |      37270 |         4 |
+|      115357 | Ivy        | Fearey     | Structural Engineer         |  92710 |      37270 |         5 |
+|       84791 | Hazel      | Tarbert    | General Manager             |  93760 |      37270 |         4 |
+|       40448 | Mindy      | Crissil    | Staff Scientist             |  94860 |      37270 |         1 |
+|       72913 | Kass       | Hefferan   | Computer Systems Analyst IV |  96401 |      37270 |         3 |
+|       67370 | Elladine   | Rising     | Social Worker               |  96767 |      37270 |         2 |
+|       37851 | Sayer      | Matterson  | Statistician III            |  98926 |      37270 |         1 |
+|       56274 | Keriann    | Alloisi    | VP Marketing                | 110150 |      37270 |         1 |
+|       67009 | North      | de Clerc   | VP Product Management       | 114257 |      37270 |         2 |
+|       72540 | Guthrey    | Iacopetti  | Office Assistant I          | 117690 |      37270 |         3 |
+|       76196 | Mirilla    | Janowski   | Cost Accountant             | 119241 |      37270 |         3 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> exit
+Bye
+ubuntu@ip-172-31-26-186:~$ mysqldump -h restored-from-point-in-time-rds.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p clarusway > 'backup.sql' file
+Enter password: 
+mysqldump: Couldn't find table: "file"
+ubuntu@ip-172-31-26-186:~$ mysqldump -h restored-from-point-in-time-rds.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p clarusway > backup.sql
+Enter password:
+ubuntu@ip-172-31-26-186:~$ ysql -h restored-from-point-in-time-rds.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p;
+
+Command 'ysql' not found, did you mean:
+
+  command 'asql' from deb asql
+  command 'isql' from deb unixodbc
+  command 'sql' from deb parallel
+  command 'mysql' from deb mysql-client-core-5.7
+  command 'mysql' from deb mariadb-client-core-10.1
+  command 'osql' from deb freetds-bin
+  command 'psql' from deb postgresql-client-common
+  command 'yaql' from deb python-yaql
+  command 'yaql' from deb python3-yaql
+  command 'tsql' from deb freetds-bin
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-172-31-26-186:~$ ls al
+ls: cannot access 'al': No such file or directory
+ubuntu@ip-172-31-26-186:~$ mysql -h [RDS-mysql endpoint] -u admin -p;
+Enter password:
+ERROR 2005 (HY000): Unknown MySQL server host '[RDS-mysql' (-3)
+ubuntu@ip-172-31-26-186:~$ mysql -h restored-from-point-in-time-rds.cbnre06bzyxe.us-east-1.rds.amazonaws.com -u admin -p;
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.0.25 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| clarusway          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+MySQL [(none)]> USE clarusway;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [clarusway]> SELECT * FROM employees;
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+| employee_id | first_name | last_name  | job_title                   | salary | reports_to | office_id |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+|       33391 | Darcy      | Nortunen   | Account Executive           |  62871 |      37270 |         1 |
+|       37270 | Yovonnda   | Magrannell | Executive Secretary         |  63996 |       NULL |        10 |
+|       37851 | Sayer      | Matterson  | Statistician III            |  98926 |      37270 |         1 |
+|       40448 | Mindy      | Crissil    | Staff Scientist             |  94860 |      37270 |         1 |
+|       56274 | Keriann    | Alloisi    | VP Marketing                | 110150 |      37270 |         1 |
+|       63196 | Alaster    | Scutchin   | Assistant Professor         |  32179 |      37270 |         2 |
+|       67009 | North      | de Clerc   | VP Product Management       | 114257 |      37270 |         2 |
+|       67370 | Elladine   | Rising     | Social Worker               |  96767 |      37270 |         2 |
+|       68249 | Nisse      | Voysey     | Financial Advisor           |  52832 |      37270 |         2 |
+|       72540 | Guthrey    | Iacopetti  | Office Assistant I          | 117690 |      37270 |         3 |
+|       72913 | Kass       | Hefferan   | Computer Systems Analyst IV |  96401 |      37270 |         3 |
+|       75900 | Virge      | Goodrum    | Information Systems Manager |  54578 |      37270 |         3 |
+|       76196 | Mirilla    | Janowski   | Cost Accountant             | 119241 |      37270 |         3 |
+|       80529 | Lynde      | Aronson    | Junior Executive            |  77182 |      37270 |         4 |
+|       80679 | Mildrid    | Sokale     | Geologist II                |  67987 |      37270 |         4 |
+|       84791 | Hazel      | Tarbert    | General Manager             |  93760 |      37270 |         4 |
+|       95213 | Cole       | Kesterton  | Pharmacist                  |  86119 |      37270 |         4 |
+|       96513 | Theresa    | Binney     | Food Chemist                |  47354 |      37270 |         5 |
+|       98374 | Estrellita | Daleman    | Staff Accountant IV         |  70187 |      37270 |         5 |
+|      115357 | Ivy        | Fearey     | Structural Engineer         |  92710 |      37270 |         5 |
++-------------+------------+------------+-----------------------------+--------+------------+-----------+
+20 rows in set (0.00 sec)
+
+MySQL [clarusway]> Connection to ec2-3-89-163-41.compute-1.amazonaws.com closed by remote host.
+Connection to ec2-3-89-163-41.compute-1.amazonaws.com closed.

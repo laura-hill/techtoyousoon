@@ -1,0 +1,247 @@
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.  
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -b, --binary
+                 open files in binary mode (CR+LFs are not processed specially)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ awk
+Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
+Usage: awk [POSIX or GNU style options] [--] 'program' file ...
+POSIX options:          GNU long options: (standard)
+        -f progfile             --file=progfile
+        -F fs                   --field-separator=fs
+        -v var=val              --assign=var=val
+Short options:          GNU long options: (extensions)
+        -b                      --characters-as-bytes
+        -c                      --traditional
+        -C                      --copyright
+        -d[file]                --dump-variables[=file]
+        -D[file]                --debug[=file]
+        -e 'program-text'       --source='program-text'
+        -E file                 --exec=file
+        -g                      --gen-pot
+        -h                      --help
+        -i includefile          --include=includefile
+        -l library              --load=library
+        -L[fatal|invalid]       --lint[=fatal|invalid]
+        -M                      --bignum
+        -N                      --use-lc-numeric
+        -n                      --non-decimal-data
+        -o[file]                --pretty-print[=file]
+        -O                      --optimize
+        -p[file]                --profile[=file]
+        -P                      --posix
+        -r                      --re-interval
+        -s                      --no-optimize
+        -S                      --sandbox
+        -t                      --lint-old
+        -V                      --version
+
+To report bugs, see node `Bugs' in `gawk.info'
+which is section `Reporting Problems and Bugs' in the
+printed version.  This same information may be found at
+https://www.gnu.org/software/gawk/manual/html_node/Bugs.html.
+PLEASE do NOT try to report bugs by posting in comp.lang.awk,
+or by using a web forum such as Stack Overflow.
+
+gawk is a pattern scanning and processing language.
+By default it reads standard input and writes standard output.
+
+Examples:
+        gawk '{ sum += $1 }; END { print sum }' file
+        gawk -F: '{ print $1 }' /etc/passwd
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ pwd
+/c/Users/mdh42
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ ls
+'3D Objects'/         Music/                                                                                         Pictures/
+ AppData/            'My Documents'@                                                                                 PrintHood@
+'Application Data'@   my-repository/                                                                                 Recent@
+ Contacts/            NetHood@                                                                                      'Saved Games'/
+ Cookies@             NTUSER.DAT                                                                                     Searches/
+ Desktop/             ntuser.dat.LOG1                                                                                sed-awk-command/
+ Documents/           ntuser.dat.LOG2                                                                                SendTo@
+ Downloads/           NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                       'Start Menu'@
+ Favorites/           NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   Templates@
+ info.json            NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   terraform.tf
+ Links/               ntuser.ini                                                                                     Videos/
+'Local Settings'@     OneDrive/
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep IP info.json
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ egrep '[0-9]{1,3}.' info.json
+            "AmiLaunchIndex": 0,
+            "ImageId": "ami-01cc34ab2709337aa",
+            "InstanceId": "i-0aff1720e6223337a",
+            "InstanceType": "t2.micro",
+            "LaunchTime": "2021-11-02T19:37:02.000Z",
+                "AvailabilityZone": "us-east-1d",
+            "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+            "PrivateIpAddress": "172.31.82.220",
+                "Code": 0,
+            "SubnetId": "subnet-ed49bccc",
+            "VpcId": "vpc-f52d178f",
+            "Architecture": "x86_64",
+            "ClientToken": "74a9bf34-4ad3-46b5-a805-5851875986c4",
+                        "AttachTime": "2021-11-02T19:37:02.000Z",
+                        "AttachmentId": "eni-attach-0f02ba95a87ed3018",
+                        "DeviceIndex": 0,
+                            "GroupId": "sg-0ba45ea3775997176"
+                    "Ipv6Addresses": [],
+                    "MacAddress": "12:d7:1d:d4:80:65",
+                    "NetworkInterfaceId": "eni-0dba24100f4c91441",
+                    "OwnerId": "046402772087",
+                    "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+                    "PrivateIpAddress": "172.31.82.220",
+                            "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+                            "PrivateIpAddress": "172.31.82.220"
+                    "SubnetId": "subnet-ed49bccc",
+                    "VpcId": "vpc-f52d178f",
+                    "GroupId": "sg-0ba45ea3775997176"
+                "CoreCount": 1,
+                "HttpPutResponseHopLimit": 1,
+    "OwnerId": "046402772087",
+    "ReservationId": "r-06204eb5486010c07"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ egrep '[0-9]{1,3}\.' info.json
+            "InstanceType": "t2.micro",
+            "LaunchTime": "2021-11-02T19:37:02.000Z",
+            "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+            "PrivateIpAddress": "172.31.82.220",
+                        "AttachTime": "2021-11-02T19:37:02.000Z",
+                    "PrivateDnsName": "ip-172-31-82-220.ec2.internal",
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep ec2-private_ip terraform.tf
+  kubernetes_api_url            = "https://ec2-private_ip:6443"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep PrivateIpAddress info.json
+            "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddress": "172.31.82.220",       
+                    "PrivateIpAddresses": [
+                            "PrivateIpAddress": "172.31.82.220"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ man sed
+bash: man: command not found
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -b, --binary
+                 open files in binary mode (CR+LFs are not processed specially)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep PrivateIpAddress info.json
+            "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddress": "172.31.82.220",       
+                    "PrivateIpAddresses": [
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep PrivateIpAddress info.json
+            "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddress": "172.31.82.220",
+                    "PrivateIpAddresses": [
+                            "PrivateIpAddress": "172.31.82.220"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep ec2-private_ip terraform.tf
+  kubernetes_api_url            = "https://ec2-private_ip:6443"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed -n '/ec2-private/s/\(https:\/\/\)ec2-private_ip\(:6443\)/\1172.31.82.220\2/p' terraform.tf
+  kubernetes_api_url            = "https://172.31.82.220:6443"
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ sed -i '/ec2-private/s/\(https:\/\/\)ec2-private_ip\(:6443\)/\1172.31.82.220\2/' terraform.tf
+
+mdh42@ATH-WL-F36PWVZ MINGW64 ~
+$ grep ec2-private_ip terraform.tf

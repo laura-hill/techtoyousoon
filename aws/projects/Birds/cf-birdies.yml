@@ -1,0 +1,90 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+    Cloudformation Template for birds carousel static website deploy on s3. This static website is distributed by  cloudfront. Cloudfront DNS is published by Route 53 using full domain name.
+Parameters:
+    DomainName:
+      Description: DNS Name of existing Amazon Route 53 hosted zone ex. clarusway.us
+      Type: AWS::Route53::HostedZone::Id
+    BirdsDomainName:
+      Description: Full domain name for the App. ex. birds.clarusway.us
+      Type: String
+      AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
+Resources:
+  BirdsBucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      AccessControl: PublicRead
+      BucketName: !Ref BirdsDomainName
+      WebsiteConfiguration: 
+        IndexDocument: index.html
+  BirdsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref BirdsBucket
+      PolicyDocument: 
+        Statement:
+          - Sid: PublicReadforStaticWebsite
+            Effect: Allow
+            Principal: '*'
+            Action: s3:GetObject
+            Resource: !Join ['', ['arn:aws:s3:::', !Ref 'BirdsBucket', /*]]
+            # !Sub "${BirdsBucket.Arn}/*"
+  BirdsCertificate:
+    Type: "AWS::CertificateManager::Certificate"
+    Properties:
+      CertificateTransparencyLoggingPreference: ENABLED
+      DomainName: !Ref BirdsDomainName #required
+      DomainValidationOptions:
+        - DomainName: !Ref BirdsDomainName
+          HostedZoneId: !Ref DomainName
+      ValidationMethod: DNS
+  BirdsDNSName:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref DomainName
+      RecordSets: 
+        - Name: !Ref BirdsDomainName
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2
+            DNSName: !GetAtt BirdsCloudfront.DomainName
+  BirdsCloudfront:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig: #required
+        Aliases: 
+        - !Ref BirdsDomainName
+        Comment: Cloudfront Distribution pointing to Birds S3 bucket
+        DefaultCacheBehavior: 
+          AllowedMethods: 
+            - GET
+            - HEAD
+          Compress: true
+          ForwardedValues: 
+            Cookies: 
+              Forward: none
+            QueryString: true
+          TargetOriginId: BirdsOrigin
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: 'http2'
+        Origins: 
+        - DomainName: !Select [2, !Split ["/", !GetAtt BirdsBucket.WebsiteURL]]
+          Id: BirdsOrigin
+          CustomOriginConfig:
+            OriginProtocolPolicy: http-only
+        PriceClass: PriceClass_All
+        ViewerCertificate: 
+          AcmCertificateArn: !Ref BirdsCertificate
+          SslSupportMethod: sni-only
+Outputs:
+  BucketName: 
+    Description: S3 Bucket URL for Birds Website
+    Value: !GetAtt BirdsBucket.WebsiteURL
+  CloudfrontEndpoint:
+    Description: Endpoint for Birds Cloudfront
+    Value: !GetAtt BirdsCloudfront.DomainName
+  FullDomainName:
+    Description: Full Domain Name of my Application
+    Value: !Ref BirdsDomainName
