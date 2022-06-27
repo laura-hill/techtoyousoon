@@ -16,7 +16,7 @@ Birds Carousel is a static website application deployed on AWS Simple Storage Se
 
   - Application should be deployed on AWS S3 as static website.
 
-  - Application should be brough to the public through domain name of the company using AWS Cloudfront and Route 53. Thus, you need to prepare a Cloudformation template with following configurations;
+  - Application should be brought to the public through domain name of the company using AWS Cloudfront and Route 53. Thus, you need to prepare a Cloudformation template with following configurations;
 
     - The application stack should be created with new AWS resources.
 
@@ -50,7 +50,7 @@ Birds Carousel is a static website application deployed on AWS Simple Storage Se
 
     - Within Route 53 a record set should be configured to send requests to the Cloudfront distribution.  
 
-    - After the stack created, following outputs should be given;
+    - After the stack is created, following outputs should be given;
 
       - Full DomainName of Birds Carousel Application
 
