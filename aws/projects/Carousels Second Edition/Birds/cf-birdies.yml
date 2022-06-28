@@ -3,10 +3,10 @@ Description: |
     Cloudformation Template for birds carousel static website deploy on s3. This static website is distributed by  cloudfront. Cloudfront DNS is published by Route 53 using full domain name.
 Parameters:
     DomainName:
-      Description: DNS Name of existing Amazon Route 53 hosted zone ex. clarusway.us
+      Description: DNS Name of existing Amazon Route 53 hosted zone ex. techtoyousoon.us
       Type: AWS::Route53::HostedZone::Id
     BirdsDomainName:
-      Description: Full domain name for the App. ex. birds.clarusway.us
+      Description: Full domain name for the App. ex. birds.techtoyousoon.us
       Type: String
       AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
 Resources:
