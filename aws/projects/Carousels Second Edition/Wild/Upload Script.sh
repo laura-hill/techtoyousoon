@@ -1,0 +1,1 @@
+aws s3 sync static-web s3://wildies.techtoyousoon.us
