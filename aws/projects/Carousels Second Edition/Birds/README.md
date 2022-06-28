@@ -12,7 +12,7 @@ Birds Carousel is a static website application deployed on AWS Simple Storage Se
 
 - Your task is to deploy the application as static web page in the production environment. Thus, you need to deploy the web application using the `index.html` and an images given within the `static-web` folder. Note the followings for your web application.
   
-  - User should face first with `index.html` when web app started.
+  - User should face first with `index.html` when web app starts.
 
   - Application should be deployed on AWS S3 as static website.
 
