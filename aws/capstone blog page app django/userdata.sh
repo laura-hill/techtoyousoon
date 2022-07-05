@@ -3,8 +3,8 @@ apt-get update -y
 apt-get install git -y
 apt-get install python3 -y
 cd /home/ubuntu/
-TOKEN="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"
-git clone https://$TOKEN@raw.githubusercontent.com/techtoyousoon/capstone-django/main/
+TOKEN="......................................."
+git clone https://$TOKEN@raw.githubusercontent.com/laura-hill/techtoyousoon/capstone-django/main/
 cd /home/ubuntu/capstone-django
 apt install python3-pip -y
 apt-get install python3.7-dev libmysqlclient-dev -y
