@@ -1,0 +1,242 @@
+
+Laura Hill@techtoyousoon MINGW64 ~
+$ pwd
+/c/Users/Laura Hill
+
+Laura Hill@techtoyousoon MINGW64 ~
+$ cd .ssh/
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+[ec2-user@ip-172-31-27-123 ~]$ sudo yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                                                                        | 3.7 kB  00:00:00     
+No packages marked for update
+[ec2-user@ip-172-31-27-123 ~]$ sudo hostnamectl set-hostname First
+[ec2-user@ip-172-31-27-123 ~]$ bash
+[ec2-user@first ~]$ hostname
+first
+[ec2-user@first ~]$ sudo yum install -y amazon-efs-utils
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package amazon-efs-utils.noarch 0:1.33.1-1.amzn2 will be installed
+--> Processing Dependency: stunnel >= 4.56 for package: amazon-efs-utils-1.33.1-1.amzn2.noarch
+--> Running transaction check
+---> Package stunnel.x86_64 0:4.56-6.amzn2.0.3 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================================================= Package                                             Arch                                      Version                                               Repository                                     Size 
+=========================================================================================================================================================================================================Installing:
+ amazon-efs-utils                                    noarch                                    1.33.1-1.amzn2                                        amzn2-core                                     51 k 
+Installing for dependencies:
+ stunnel                                             x86_64                                    4.56-6.amzn2.0.3                                      amzn2-core                                    149 k 
+
+Transaction Summary
+=========================================================================================================================================================================================================Install  1 Package (+1 Dependent package)
+
+Total download size: 200 k
+Installed size: 506 k
+Downloading packages:
+(1/2): amazon-efs-utils-1.33.1-1.amzn2.noarch.rpm                                                                                                                                 |  51 kB  00:00:00     
+(2/2): stunnel-4.56-6.amzn2.0.3.x86_64.rpm                                                                                                                                        | 149 kB  00:00:00     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Total                                                                                                                                                                    1.4 MB/s | 200 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+[ec2-user@first ~]$ sudo mkdir efs
+[ec2-user@first efs]$ cat example.txt
+I created this file using EC2-1 instance.    
+
+I should be able to see it from any instance.
+[ec2-user@first efs]$ exit
+exit
+[ec2-user@ip-172-31-27-123 ~]$ exit
+logout
+Connection to ec2-54-87-136-234.compute-1.amazonaws.com closed.
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ pwd
+/c/Users/Laura Hill/.ssh
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+[ec2-user@ip-172-31-28-70 ~]$ sudo yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                                                                        | 3.7 kB  00:00:00     
+No packages marked for update
+[ec2-user@ip-172-31-28-70 ~]$ sudo hostnamectl set-hostname Second
+[ec2-user@ip-172-31-28-70 ~]$ bash
+[ec2-user@second ~]$ sdo yum install -y amazon-efs-utils
+bash: sdo: command not found
+[ec2-user@second ~]$ sudo yum install -y amazon-efs-utils
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package amazon-efs-utils.noarch 0:1.33.1-1.amzn2 will be installed
+--> Processing Dependency: stunnel >= 4.56 for package: amazon-efs-utils-1.33.1-1.amzn2.noarch
+--> Running transaction check
+---> Package stunnel.x86_64 0:4.56-6.amzn2.0.3 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================================================= Package                                             Arch                                      Version                                               Repository                                     Size 
+=========================================================================================================================================================================================================Installing:
+ amazon-efs-utils                                    noarch                                    1.33.1-1.amzn2                                        amzn2-core                                     51 k 
+Installing for dependencies:
+ stunnel                                             x86_64                                    4.56-6.amzn2.0.3                                      amzn2-core                                    149 k 
+
+Transaction Summary
+=========================================================================================================================================================================================================Install  1 Package (+1 Dependent package)
+
+Total download size: 200 k
+Installed size: 506 k
+Downloading packages:
+(1/2): amazon-efs-utils-1.33.1-1.amzn2.noarch.rpm                                                                                                                                 |  51 kB  00:00:00     
+(2/2): stunnel-4.56-6.amzn2.0.3.x86_64.rpm                                                                                                                                        | 149 kB  00:00:00     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Total                                                                                                                                                                    1.4 MB/s | 200 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : stunnel-4.56-6.amzn2.0.3.x86_64                                                                                                                                                       1/2 
+  Installing : amazon-efs-utils-1.33.1-1.amzn2.noarch                                                                                                                                                2/2 
+  Verifying  : stunnel-4.56-6.amzn2.0.3.x86_64                                                                                                                                                       1/2 
+  Verifying  : amazon-efs-utils-1.33.1-1.amzn2.noarch                                                                                                                                                2/2 
+
+Installed:
+  amazon-efs-utils.noarch 0:1.33.1-1.amzn2
+
+Dependency Installed:
+  stunnel.x86_64 0:4.56-6.amzn2.0.3
+
+[ec2-user@second efs]$ exit
+exit
+[ec2-user@ip-172-31-28-70 ~]$ exit
+logout
+Connection to ec2-3-94-160-58.compute-1.amazonaws.com closed.
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ ssh -i "aws-laura.pem" ec2-user@ec2-54-87-136-234.compute-1.amazonaws.com
+Last login: Sat Jul  2 15:21:12 2022 from pool-173-66-82-180.washdc.fios.verizon.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@first ~]$ cd efs/
+[ec2-user@first efs]$ ll
+total 4
+-rw-r--r-- 1 root root 113 Jul  2 15:37 example.txt
+[ec2-user@first efs]$ cat exmaple.txt
+cat: exmaple.txt: No such file or directory
+[ec2-user@first efs]$ cat example.txt
+I created this file using EC2-2 instance.
+
+hello from here again!
+
+I should be able to see it from any instance.
+[ec2-user@first efs]$ pwd
+/home/ec2-user/efs
+[ec2-user@first efs]$ sh -i "aws-laura.pem" ec2-user@ec2-54-210-198-210.compute-1.amazonaws.com
+sh: aws-laura.pem: No such file or directory
+[ec2-user@first efs]$ exit
+logout
+Connection to ec2-54-87-136-234.compute-1.amazonaws.com closed.
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ pwd
+/c/Users/Laura Hill/.ssh
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ sh -i "aws-laura.pem" ec2-user@ec2-54-210-198-210.compute-1.amazonaws.com
+sh: -----BEGIN: command not found
+sh: MIIEowIBAAKCAQEAq7DYvpW+UaJH9e1ta1ZDM3KAwR7kehfDxZJqcyfMSZqhcIqG: command not found
+sh: CoKOIpmg11MdviiiwlMOaJ33XWYLv6IiB22lifVRI4Aw4CxANxGdTlgVkChce8Bg: command not found
+sh: 2cyzXwZt/XdSfemtG9z992hbPwJ2mcsb2xxNsTXsPmA0S4mCDczDoFVQBGlNp+aJ: No such file or directory
+sh: wtG7Ppks21mURzwnQ7LG8q37HummifvNBT91Szkf4bbqXB8t08SmyqUsz18IJyqn: command not found
+sh: RoVU0RU5ClaS5SpzA4AJN1RXjBi7U03f9WKc0LfOyK6xfiIdl7MgLZuleoqNdtU2: command not found
+sh: 0NpoT065S7JJPf/ua4QnfsnJrsOiyxhfDWJl6wIDAQABAoIBADvUdtODbz0XZihH: No such file or directory
+sh: QtgiyWxGPKQP1eLOIUTaTwouFjyYDCYhv7At6sYX7zraFgVMN9usAdtnIOqFQxbW: command not found
+sh: szEPfp5ixJGwfFfCU+Zc1wqUG3+O8RuW4KlFckRtAytOx4plQhPxoPb0gMemXhod: command not found
+sh: 82kZpeFZPyhFcjPYiV+xuYJH+IhwbV6uK8nA6p0992H6OU59P5ypyIYyegpxd7VL: command not found
+sh: k25OHvozJjpvGPciIWRGSz6PpLBLNO9tvfQHcnob2dPe8oQOdrknCjixrAZ4T5kG: command not found
+sh: TZfEZfRtRAVkScW2ZaqENXuv8cS9r6ZtQtKrqdHC3Tk3oLp0mb3jbmMTXvaUE5YX: command not found
+sh: DlSpZqECgYEA+iLhFV4bR4TRSK/EoqfoM9NBvnynWyrdkAL0DJZwUQY4WukuXWo0: No such file or directory
+sh: FHohEeL1rsh4n1cFcwfAqGjTZzFS/XGAjbPI5vTSK4Be1F0fyE0pYWcbov74U/Xi: No such file or directory
+sh: OIBUmgjctDD5PIx7gXms9scTMr/nKX3wnqyouCvJ3rV89HieMFx1mXkCgYEAr7cz: No such file or directory
+sh: HdAc+A/cx1FiYAbfwNdOP4tP/7GPAw81vzN+fKnGI7edvjgIMVVtg1GxpyTJEmdr: No such file or directory
+sh: bTa/whGa2GtmYQaEoIMxCB9bZuS8dQlwWvrb+RxolJad03/z5vbXS0Al5UkgGMzK: No such file or directory
+sh: 0cptTyAzpUJF0pV4vqsMWXuO1k3fdoracaMBhYMCgYB4OgONzam2+nPNSA5vT90f: command not found
+sh: 686RzEB0ZWoRKho7YqOhjifQKnwKkl1t6jWy7y+/TsQLcjxASd2kFJ5n3yFQiBmO: No such file or directory
+sh: Anfx6oKKPi1WTVxVXiEhm/mAoqShVnHhTm1bjB7ozRE+tRc36E/mXVEw92QYYVwi: No such file or directory
+sh: KEMAIqvoy7q/lqoR/J7ZoQKBgHoEaE2Kh6NGOJR8EikGfPgHSsHbdqji3qFMPZFR: No such file or directory
+sh: K8NbjUieJ77AYAgJ/2sSHqAnbi0GfdWwEAaufO1N3yD/Crf/gdvXEnxn1+oZrNiw: No such file or directory
+sh: nHHm5URRNrV4g6DdxfDuUaJfXhd6lliKDc/FV7epRp0NyHP2iTPWFgEAwG0rzLbe: No such file or directory
+sh: b58LAoGBALVBb+aHwMVKYGK8RfDu0K+VczTikkNboYcyxwcsvWBtfj1sbryprEbc: command not found
+sh: F9XbNonTBG47H5Gfrp29uYBDFqkotM5fiV0fzMNAV+PCiVUTn84eb8iG8aAiEhvA: command not found
+sh: 60Uc+iMslFBgDtrUtiiZx5ljmNneVXlVuvdNW56c+IAyIdYnY4F8: command not found
+sh: -----END: command not found
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ ssh -i "aws-laura.pem" ec2-user@ec2-54-210-198-210.compute-1.amazonaws.com
+The authenticity of host 'ec2-54-210-198-210.compute-1.amazonaws.com (54.210.198.210)' can't be established.
+ED25519 key fingerprint is SHA256:eZhLgAyKwJo3qZdOAeMtrg0ZLW9YwvbBAofUDPj36do.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-54-210-198-210.compute-1.amazonaws.com' (ED25519) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-42-208 ~]$ sudo hostnamectl set-hostname Third
+[ec2-user@ip-172-31-42-208 ~]$ cd efs/
+-bash: cd: efs/: No such file or directory
+[ec2-user@ip-172-31-42-208 ~]$ cd /mnt/efs/fs1/
+[ec2-user@ip-172-31-42-208 fs1]$ sudo nano example.txt
+[ec2-user@ip-172-31-42-208 fs1]$ cat example.txt
+hello from EC1 -2 - 3
+
+I created this file using EC2-2 instance.
+
+hello from here again!
+
+I should be able to see it from any instance.
+[ec2-user@ip-172-31-42-208 fs1]$ exit
+logout
+Connection to ec2-54-210-198-210.compute-1.amazonaws.com closed.
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ pwd
+/c/Users/Laura Hill/.ssh
+
+Laura Hill@techtoyousoon MINGW64 ~/.ssh
+$ ssh -i "aws-laura.pem" ec2-user@ec2-3-94-160-58.compute-1.amazonaws.com
+Last login: Sat Jul  2 15:32:29 2022 from pool-173-66-82-180.washdc.fios.verizon.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@second ~]$ cat example.txt
+cat: example.txt: No such file or directory
+[ec2-user@second ~]$ cd efs/
+[ec2-user@second efs]$ ll
+total 4
+-rw-r--r-- 1 root root 136 Jul  2 16:12 example.txt
+[ec2-user@second efs]$ cat example.txt
+hello from EC1 -2 - 3
+
+I created this file using EC2-2 instance.
+
+hello from here again!
+
+I should be able to see it from any instance.
+[ec2-user@second efs]$ Connection to ec2-3-94-160-58.compute-1.amazonaws.com closed by remote host.
+Connection to ec2-3-94-160-58.compute-1.amazonaws.com closed.
