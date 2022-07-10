@@ -2,7 +2,7 @@
 
 ## Description
 
-Laura's Blog Page Application aims to deploy a blog application as a web application written Django Framework on AWS Cloud Infrastructure. This infrastructure has an Application Load Balancer with Auto Scaling Group of Elastic Compute Cloud (EC2) Instances and Relational Database Service (RDS) on defined VPC. Also, The Cloudfront and Route 53 services are located in front of the architecture and manage the traffic in secure. User is able to upload pictures and videos on the blog page and these are kept on an S3 Bucket. This architecture will be created by the firm's DevOps guy.
+Laura's Clarusway Blog Page Application aims to deploy a blog application as a web application written Django Framework on AWS Cloud Infrastructure. This infrastructure has an Application Load Balancer with Auto Scaling Group of Elastic Compute Cloud (EC2) Instances and Relational Database Service (RDS) on defined VPC. Also, The Cloudfront and Route 53 services are located in front of the architecture and manage the traffic in secure. User is able to upload pictures and videos on the blog page and these are kept on an S3 Bucket. This architecture will be created by the firm's DevOps guy.
 
 ## Problem Statement
 

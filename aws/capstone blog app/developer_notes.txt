@@ -10,7 +10,7 @@ Hi DevOps Team
     c. Port - "PORT"
     d. PASSWORD variable must be written on "/src/.env" file not to be exposed with settings file
 
-- We need to look for an object list of S3. That's why, we decided to create a DynamoDB table. We have thought to use Lambda function for this purpose and also we have written python code. However, we need help to create Lambda function to manage this serverless process. You can find our python function as lambda_function.py within github repo.
+- We need to look object list of S3. That's why, we decided to create a DynamoDB table. We have thought to use Lambda function for this purpose and also we have written python code. However, we need help to create Lambda function to manage this serverless process. You can find our python function as lambda_function.py within github repo.
 
 - Since our first aim is to keep our environment in highly secure environment, we want you to establish this infrastructure in our own VPC. 
 

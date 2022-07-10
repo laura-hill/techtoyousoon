@@ -1,0 +1,32 @@
+{
+    "Records": [
+        {
+            "eventVersion": "2.1", 
+            "eventSource": "aws:s3", 
+            "awsRegion": "us-east-2", 
+            "eventTime": "2022-03-20T09:01:48.920Z", 
+            "eventName": "ObjectCreated:Put",
+            "userIdentity": {
+                "principalId":"AWS:AIDAQVTOSDR32IV2ZZBQ5"}, 
+                "requestParameters": {
+                    "sourceIPAddress": "73.91.174.252"}, 
+                "responseElements": {
+                    "x-amz-request-id": "MAC178KSKQSS3YX4", 
+                    "x-amz-id-2": "Iq4e4xoBKMsAzJBb2z+wuYPPzk1fITqiyLNpLPfLtok39we8frhk4W6cwiaTcUrNkke5vYfVcIBg07vFe+vd2061hngcJhRb"}, 
+                    "s3": {
+                        "s3SchemaVersion": "1.0", 
+                        "configurationId": "fd872651-5bc6-493f-8ace-c9b38368c237", 
+                        "bucket": {
+                            "name": "awscapstoneserdarblog", 
+                            "ownerIdentity": {
+                                "principalId":"A3U7I1C4ENPWNN"}, 
+                                "arn":"arn:aws:s3:::awscapstoneserdarblog"
+                        }, 
+                        "object": {
+                             "key": "media/blog/1/clarusway.jpg", 
+                              "sequencer": "006236ED7CE23F3AE3"
+                                    }
+                    }
+        }
+    ]
+}
