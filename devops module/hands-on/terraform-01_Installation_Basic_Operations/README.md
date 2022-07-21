@@ -91,7 +91,7 @@ $ terraform apply -help
 - Your AWS credentials configured locally. 
 
 ```bash
-$ aws configure
+$ aws configure #you can create a user in IAM. If you have one handy go to cd .aws then ls the cat credentials and it will show the aws_access_key_id and secret_access
 ```
 
 - Hard-coding credentials into any Terraform configuration is not recommended, and risks secret leakage should this file ever be committed to a public version control system. Using AWS credentials in EC2 instance is not recommended.
@@ -124,7 +124,7 @@ $ mkdir terraform-aws && cd terraform-aws && touch main.tf
 
 - Install the `HashiCorp Terraform` extension in VSCode.
 
-- Create a file named `main.tf` for the configuration code and copy and paste the following content. 
+- Create a file named `main.tf` for the configuration code and copy and paste the following content. Use vi main.tf and then do :wq 
 
 ```t
 terraform {
