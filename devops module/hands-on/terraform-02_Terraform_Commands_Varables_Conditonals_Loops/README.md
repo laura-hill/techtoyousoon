@@ -35,7 +35,7 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "4.8.0"
+      version = "~> 4.8.0"
     }
   }
 }
@@ -43,14 +43,14 @@ terraform {
 resource "aws_instance" "tf-ec2" {
   ami           = "ami-0ed9277fb7eb570c9"
   instance_type = "t2.micro"
-  key_name      = "oliver"    # write your pem file without .pem extension>
+  key_name      = "aws-laura"    # write your pem file without .pem extension>
   tags = {
     "Name" = "tf-ec2"
   }
 }
 
 resource "aws_s3_bucket" "tf-s3" {
-  bucket = "oliver-tf-test-bucket-addwhateveryouwant"
+  bucket = "laura-tf-test-bucket-addwhateveryouwant"
 }
 ```
 
@@ -313,7 +313,7 @@ variable "ec2_type" {
 }
 
 variable "ec2_ami" {
-  default = "ami-0742b4e673072066f"
+  default = "ami-0ed9277fb7eb570c9"
 }
 
 resource "aws_instance" "tf-ec2" {
