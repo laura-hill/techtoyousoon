@@ -39,6 +39,10 @@ data "aws_ami" "tf_ami" {
     name = "virtualization-type"
     values = ["hvm"]
   }
+filter {
+    name = "name"
+    values = ["my-ami"]
+  }
 }
 
 resource "aws_instance" "tf-ec2" {
