@@ -56,6 +56,9 @@ resource "aws_instance" "tf-ec2" {
 ```
 
 ```bash
+terraform init
+
+```bash
 terraform plan
 ```
 
@@ -94,7 +97,7 @@ terraform destroy
 - Go to the `s3-backend` folder and create a file name `backend.tf`. Add the followings.
 
 ```bash
-cd .. && mkdir s3-backend && cd s3-backend && touch backend.tf
+ls
 ```
 
 ```go
