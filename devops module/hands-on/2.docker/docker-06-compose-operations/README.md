@@ -242,7 +242,7 @@ docker images
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return 'Hello World! This is modified app. I have been seen {} times.\n'.format(count)
+    return 'Hello World! This is just a minor modification to the app. I have been seen {} times.\n'.format(count)
 ```
 -Save the file. And run `docker-compose up` command.
 
