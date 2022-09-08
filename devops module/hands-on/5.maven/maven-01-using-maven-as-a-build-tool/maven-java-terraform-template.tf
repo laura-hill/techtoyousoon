@@ -1,10 +1,18 @@
 //This Terraform Template creates an EC2 Instance with Java-11 and Maven.
 //Amazon Linux 2 (ami-0947d2ba12ee1ff75) will be used as an EC2 Instance with
 //custom security group allowing SSH connections from anywhere on port 22.
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~>4.8"
+    }
+  }
+}
 
 provider "aws" {
   region = "us-east-1"
-  profile = "matt"
+  //profile = "tyler"
   //  access_key = ""
   //  secret_key = ""
   //  If you have entered your credentials in AWS CLI before, you do not need to use these arguments.
@@ -15,7 +23,7 @@ resource "aws_instance" "maven-ec2" {
   instance_type   = "t2.micro"
   
   //  Write your own pem file name
-  key_name        = "aws-laura.pem"
+  key_name        = "aws-laura"
   security_groups = ["maven-sec-grp"]
 
   tags = {
@@ -35,8 +43,14 @@ resource "aws_instance" "maven-ec2" {
                 EOF
 }
 
+data "aws_vpc" "selected" {
+  default = true
+}
+  
+  
 resource "aws_security_group" "tf-sec-gr" {
   name = "maven-sec-grp"
+  vpc_id = data.aws_vpc.selected.id
 
   tags = {
     Name = "maven-sec-grp"
@@ -63,3 +77,34 @@ resource "aws_security_group" "tf-sec-gr" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
