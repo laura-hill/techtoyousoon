@@ -4,7 +4,7 @@ variable "region" {
   default = "us-east-1"
 }
 variable "mykey" {
-  default = "mykey"
+  default = "aws-laura.pem"
 }
 variable "tags" {
   default = ["stage", "production"]
